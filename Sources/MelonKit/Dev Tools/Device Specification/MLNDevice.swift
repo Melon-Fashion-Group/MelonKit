@@ -214,10 +214,10 @@ public final class MLNDevice: MLNDeviceSpecificationable {
     // MARK: - Private functions
 
     private func getCPUName(from metalDevice: MTLDevice) -> String {
-        let gpuName = metalDevice.name
+        let cpuName = metalDevice.name
             .replacingOccurrences(of: "GPU", with: String.empty)
             .trimmingCharacters(in: .whitespacesAndNewlines)
 
-        return gpuName.contains("Apple") ? gpuName : "-"
+        return cpuName.contains("Apple") ? cpuName : "-"
     }
 }
