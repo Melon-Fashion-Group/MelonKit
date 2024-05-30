@@ -31,12 +31,12 @@ public final class MLNFramework: MLNFrameworkSpecificationable {
     ///
     /// A property that allows you to get the version of the framework being used.
     ///
-    public let version = Version(major: 0, minor: 12, patch: 0)
+    public let version = Version(major: 0, minor: 13, patch: 0)
 
     ///
     /// A property that allows you to get the build version of the framework being used.
     ///
-    public let build: Build = 7
+    public let build: Build = 11
 
 
 

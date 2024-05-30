@@ -16,18 +16,18 @@ import Foundation
 // MARK: - MLNServiceType
 
 ///
-///
+/// Список типов объектов, хранящихся в контейнере.
 ///
 @available(iOS 16.0, *)
 public enum MLNServiceType {
 
     ///
-    ///
+    /// New.
     ///
     case new
 
     ///
-    ///
+    /// The same instance.
     ///
     case singleton(instance: MLNServiceInstance)
 }

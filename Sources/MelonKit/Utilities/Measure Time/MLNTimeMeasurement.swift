@@ -37,7 +37,7 @@ public final class MLNTimeMeasurement: MLNTimeMeasurable {
     /// - Bug: None
     ///
     /// - Parameters:
-    ///    - id: A string identifier to identify the executed block. The default value is .empty.
+    ///    - id: A string identifier to identify the executed block. The default value is `.empty`.
     ///    - precision: Measurement accuracy. The default value is 2 decimal places.
     ///    - block: Block of code for measuring execution time.
     ///
@@ -75,6 +75,8 @@ public final class MLNTimeMeasurement: MLNTimeMeasurable {
     /// - Parameters:
     ///    - precision: Measurement accuracy. The default value is 2 decimal places.
     ///    - block: Block of code for measuring execution time.
+    ///
+    /// - Returns: String with execution time.
     ///
     public static func measure(
         precision: Precision = .double,

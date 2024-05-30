@@ -58,7 +58,7 @@ extension Color: MLNColorConvertible {
     /// - Bug: None
     ///
     /// - Parameters:
-    ///    - isAlphaChannelNeeded: A value that determines whether the alpha channel should be saved. The default value is false.
+    ///    - isAlphaChannelNeeded: A value that determines whether the alpha channel should be saved. The default value is `false`.
     ///
     /// - Returns: A string containing the color value in hexadecimal, or nil if the color conversion failed.
     ///

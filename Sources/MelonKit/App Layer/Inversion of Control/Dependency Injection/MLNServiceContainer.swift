@@ -16,23 +16,40 @@ import Foundation
 // MARK: - MLNServiceContainer
 
 ///
-///
+/// A class that implements the ability to add and extract dependencies from a DI container.
 ///
 @available(iOS 16.0, *)
 public final class MLNServiceContainer: MLNServiceContainerable {
 
-    // MARK: - Static properties
+    // MARK: - Private properties
 
     private static var factories: [String: () -> Any] = [:]
-
     private static var cache: [String: Any] = [:]
+
+
+
+    // MARK: - Init
+
+    private init() { }
 
 
 
     // MARK: - Public methods
 
     ///
+    /// A method that allows you to add a dependency to a container.
     ///
+    /// Example:
+    ///
+    ///     MLNServiceContainer.register(NetworkConfig.self, NetworkConfig.init())
+    ///
+    /// - Authors: Dmitry Novikov · Melon Fashion Group
+    ///
+    /// - Bug: None
+    ///
+    /// - Parameters:
+    ///    - type: The type of object stored in the container.
+    ///    - factory: An instance of the object saved to the container.
     ///
     public static func register<Service: MLNServiceable>(
         type: Service.Type,
@@ -42,11 +59,25 @@ public final class MLNServiceContainer: MLNServiceContainerable {
     }
 
     ///
+    /// A method that allows you to extract a dependency from a container.
     ///
+    /// Example:
+    ///
+    ///     MLNServiceContainer.resolve(.new, NetworkConfig.self)
+    ///
+    /// - Authors: Dmitry Novikov · Melon Fashion Group
+    ///
+    /// - Bug: None
+    ///
+    /// - Parameters:
+    ///    - resolveType: The type of storage of an object in a container.
+    ///    - type: Object type. As an example: UIDevice.Type.
+    ///
+    /// - Returns: The service retrieved from the container, or `nil` if the operation failed.
     ///
     public static func resolve<Service: MLNServiceable>(
         _ resolveType: MLNServiceType,
-        _ type: Service.Type
+        type: Service.Type
     ) -> Service? {
         let serviceName = String(describing: type.self)
 

@@ -16,18 +16,18 @@ import Foundation
 // MARK: - MLNServiceInstance
 
 ///
-///
+/// A list of possible Singleton types for an object instance in the container.
 ///
 @available(iOS 16.0, *)
 public enum MLNServiceInstance {
 
     ///
-    ///
+    /// New.
     ///
     case new
 
     ///
-    ///
+    /// The same.
     ///
     case same
 }
