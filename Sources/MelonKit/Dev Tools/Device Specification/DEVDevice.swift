@@ -41,7 +41,7 @@ public final class MLNDevice: MLNDeviceSpecificationable {
 
         if deviceName.contains(General.DeviceType.smartphone.rawValue) {
             deviceType = .smartphone
-        } else if deviceName.contains(General.DeviceType.tablet.rawValue) {
+        } else {
             deviceType = .tablet
         }
 
