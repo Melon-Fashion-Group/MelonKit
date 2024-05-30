@@ -30,10 +30,19 @@ let package = Package(
             targets: ["MelonKit"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/Lofticries-Games/SubrosaKit", from: "1.1.3")
+    ],
     targets: [
-        .target(name: "MelonKit"),
+        .target(
+            name: "MelonKit",
+            dependencies: [
+                .product(name: "SubrosaKit", package: "SubrosaKit")
+            ]
+        ),
         .testTarget(
             name: "MelonKitTests",
-            dependencies: ["MelonKit"]),
+            dependencies: ["MelonKit"]
+        )
     ]
 )
