@@ -45,7 +45,7 @@ extension MLNDevice.Hardware {
             physicalSize: UInt64
         ) {
             self.isUnified = isUnified
-            self.physicalSize = UTLBytesRepresentation.asMegabytes(physicalSize)
+            self.physicalSize = MLNBytesRepresentation.asMegabytes(physicalSize)
         }
     }
 }

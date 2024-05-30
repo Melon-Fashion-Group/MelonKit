@@ -53,7 +53,7 @@ extension MLNDevice.Hardware {
         ) {
             self.name = name
             self.registryID = registryID
-            self.memorySize = UTLBytesRepresentation.asMegabytes(memorySize)
+            self.memorySize = MLNBytesRepresentation.asMegabytes(memorySize)
         }
     }
 }
