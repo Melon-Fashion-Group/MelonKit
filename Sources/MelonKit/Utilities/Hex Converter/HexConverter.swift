@@ -2,7 +2,7 @@
 //  HexConverter.swift
 //  MelonKit
 //
-//  Created by Dimka Novikov on 24.05.2024.
+//  Created by Dimka Novikov on 30.05.2024.
 //  Copyright © 2024 Melon Fashion Group. All rights reserved.
 //
 
