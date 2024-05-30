@@ -37,7 +37,7 @@ extension View {
     ///
     /// - Parameters:
     ///    - color: Debug frame display color. The default value is a random one of 3 colors: red, green or blue.
-    ///    - filling: Filling the debug frame. The default value is true.
+    ///    - filling: Filling the debug frame. The default value is `true`.
     ///
     /// - Returns: View with a frame drawn for debugging.
     ///

@@ -48,9 +48,9 @@ extension MLNServiceable {
 
 // TODO: - Create -
 
-// 1. App Layer ❌
-//    1. Inversion of Control ❌
-//       1. Dependency Injection ❌
+// 1. App Layer ⚠️
+//    1. Inversion of Control ✅
+//       1. Dependency Injection ✅
 //    2. Navigation ❌
 //       1. Routing ❌
 // 2. Developer Tools ⚠️
@@ -61,17 +61,17 @@ extension MLNServiceable {
 //       1. App Specification ✅
 //       2. Framework Specification ✅
 // 3. Foundation ✅
-// 4. Hardware ❌
+// 4. Hardware ⚠️
 //    1. Data Storages ❌
 //       1. Caching Storage ❌ [❗️: depends on File Storage]
 //       2. Data Codables ❌
 //       3. Default Storage ❌
 //       4. File Storage ❌
 //       5. Keychain Storage ❌
-//    2. Encryption Algorithms ❌
-//       1. SHA-2 ❌
-//    3. Haptic Feedbacks ❌
-//       1. Basic Haptic Feedback ❌
+//    2. Encryption Algorithms ✅
+//       1. SHA-2 ✅
+//    3. Haptic Feedbacks ✅
+//       1. Haptic Feedback ✅
 //    4. Media Engines ❌
 //       1. Video Player ❌
 //    5. Network Interaction ❌
@@ -87,4 +87,4 @@ extension MLNServiceable {
 // 7. Types Extensions ⚠️
 //    1. Advanced Types ⚠️
 //    2. Foundation Types ⚠️
-// 7. Utilities ⚠️
+// 7. Utilities ✅
