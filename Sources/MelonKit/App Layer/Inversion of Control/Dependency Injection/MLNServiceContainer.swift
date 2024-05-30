@@ -48,7 +48,7 @@ public final class MLNServiceContainer: MLNServiceContainerable {
     /// - Bug: None
     ///
     /// - Parameters:
-    ///    - type: The type of object stored in the container.
+    ///    - type: The type of object that conforms to MLNServiceable.
     ///    - factory: An instance of the object saved to the container.
     ///
     public static func register<Service: MLNServiceable>(
@@ -71,7 +71,7 @@ public final class MLNServiceContainer: MLNServiceContainerable {
     ///
     /// - Parameters:
     ///    - resolveType: The type of storage of an object in a container.
-    ///    - type: Object type. As an example: UIDevice.Type.
+    ///    - type: The type of the object that conforms to MLNServiceable. As an example: MLNFramework.info.
     ///
     /// - Returns: The service retrieved from the container, or `nil` if the operation failed.
     ///
