@@ -27,7 +27,7 @@ extension MLNDevice.Hardware {
         // MARK: - Public properties
 
         ///
-        /// The name of the CPU in the device.
+        /// The name of the CPU in the device or "-" if the name could not be determined.
         ///
         public let name: String
 
