@@ -1,6 +1,6 @@
 # MelonKit
 
-MelonKit is an easy way to start developing iOS app and MVP.
+MelonKit is an easy way to start MLNeloping iOS app and MVP.
 
 #### `Xcode 15.4+` ﹒ `Swift 5.10+`
 
