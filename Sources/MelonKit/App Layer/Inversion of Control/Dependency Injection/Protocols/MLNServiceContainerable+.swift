@@ -22,7 +22,7 @@ extension MLNServiceContainerable {
     ///
     /// A textual representation of service information of this class.
     ///
-    public var description: String {
+    public var debugDescription: String {
         "A container for storing all services within the app."
     }
 }

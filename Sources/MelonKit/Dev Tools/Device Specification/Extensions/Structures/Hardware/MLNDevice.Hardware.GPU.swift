@@ -38,7 +38,7 @@ extension MLNDevice.Hardware {
         public let registryID: UInt64
 
         ///
-        /// An approximation of how much memory, in bytes, this GPU device can allocate without affecting its runtime performance.
+        /// An approximation of how much memory, in megabytes, this GPU device can allocate without affecting its runtime performance.
         ///
         public let memorySize: UInt64
 
