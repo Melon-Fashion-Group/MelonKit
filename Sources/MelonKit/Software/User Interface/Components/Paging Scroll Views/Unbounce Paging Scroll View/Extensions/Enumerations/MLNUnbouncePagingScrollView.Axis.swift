@@ -1,5 +1,5 @@
 //
-//  MLNBouncePagingScrollView.Axis.swift
+//  MLNUnbouncePagingScrollView.Axis.swift
 //  MelonKit
 //
 //  Created by Dimka Novikov on 05.08.2024.
@@ -13,10 +13,10 @@ import Foundation
 
 
 
-// MARK: - MLNBouncePagingScrollView.Axis
+// MARK: - MLNUnbouncePagingScrollView.Axis
 
 @available(iOS 17.0, *)
-extension MLNBouncePagingScrollView {
+extension MLNUnbouncePagingScrollView {
 
     // MARK: - Public enumerations
 
@@ -36,4 +36,3 @@ extension MLNBouncePagingScrollView {
         case vertical
     }
 }
-

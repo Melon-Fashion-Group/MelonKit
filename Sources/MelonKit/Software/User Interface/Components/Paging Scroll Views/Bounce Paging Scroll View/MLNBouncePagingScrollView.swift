@@ -53,7 +53,7 @@ public struct MLNBouncePagingScrollView<ContentView: View>: View {
     // MARK: - Init
 
     ///
-    /// An initializer that allows you to create a UI component with page content scrolling and a bounce effect on border pages.
+    /// An initializer that allows you to create a UI component with page content scrolling with a bounce effect on border pages.
     ///
     /// Example:
     ///
