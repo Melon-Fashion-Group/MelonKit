@@ -15,7 +15,7 @@ import Foundation
 
 // MARK: - ProductList
 
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 final class ProductList: ProductListable {
 
     // MARK: - Public properties

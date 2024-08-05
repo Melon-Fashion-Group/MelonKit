@@ -18,5 +18,5 @@ import Foundation
 ///
 /// An type alias for the AnyObject and CustomDebugStringConvertible protocols.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public typealias MLNObject = AnyObject & CustomDebugStringConvertible

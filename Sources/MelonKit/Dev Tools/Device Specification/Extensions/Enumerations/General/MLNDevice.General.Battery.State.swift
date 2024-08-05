@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNDevice.General.Battery.State
 
+@available(iOS 17.0, *)
 extension MLNDevice.General.Battery {
 
     // MARK: - Public enumerations

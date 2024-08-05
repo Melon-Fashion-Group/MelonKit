@@ -41,7 +41,7 @@ extension View {
     ///
     /// - Returns: View with a frame drawn for debugging.
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public func drawDebugFrame(
         color: Color = [.red, .green, .blue].randomElement()!,
         filling: Bool = true

@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNDevice.Hardware
 
+@available(iOS 17.0, *)
 extension MLNDevice {
 
     // MARK: - Public structures

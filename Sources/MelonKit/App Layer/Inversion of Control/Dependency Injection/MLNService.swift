@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A structure that implements a property wrapper for SwiftUI. For ease of object retrieval in SwiftUI style.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 @propertyWrapper
 public struct MLNService<Service: MLNServiceable> {
 

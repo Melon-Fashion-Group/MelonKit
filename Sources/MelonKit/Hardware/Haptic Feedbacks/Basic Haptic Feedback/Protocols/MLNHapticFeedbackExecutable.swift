@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol that describes the operation of  Haptic Feedback.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public protocol MLNHapticFeedbackExecutable: MLNServiceable {
 
     // MARK: - Public methods

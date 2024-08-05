@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol that describes the ability to convert bytes into another available unit of measurement.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public protocol MLNBytesRepresentable: MLNServiceable {
 
     // MARK: - Public methods

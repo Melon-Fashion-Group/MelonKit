@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol that describes the ability to measure the execution time of a block of code.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public protocol MLNTimeMeasurable: MLNServiceable {
 
     // MARK: - Public methods

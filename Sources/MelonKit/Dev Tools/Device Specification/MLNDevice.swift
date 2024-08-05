@@ -19,7 +19,7 @@ import MetalKit
 ///
 /// A class that provides information about the current device and its hardware and software.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public final class MLNDevice: MLNDeviceSpecificationable {
 
     // MARK: - Public properties

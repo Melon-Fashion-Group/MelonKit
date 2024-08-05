@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A class that implements an app specification.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public final class MLNApp: MLNAppSpecificationable {
 
     // MARK: - Public properties

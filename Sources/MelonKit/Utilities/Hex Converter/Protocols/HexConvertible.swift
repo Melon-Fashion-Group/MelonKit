@@ -15,7 +15,7 @@ import SwiftUI
 
 // MARK: - HexConvertible
 
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 protocol HexConvertible: AnyObject {
 
     // MARK: - Public methods

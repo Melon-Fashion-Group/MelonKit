@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNDevice.OperatingSystem.Name
 
+@available(iOS 17.0, *)
 extension MLNDevice.OperatingSystem {
 
     // MARK: - Public enumerations

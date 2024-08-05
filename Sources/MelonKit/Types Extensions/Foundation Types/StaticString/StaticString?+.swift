@@ -22,7 +22,7 @@ extension StaticString? {
     ///
     /// A property of a static string that allows you to conveniently check whether it matches the value nil or is empty.
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public var isNilOrEmpty: Bool {
         self.isNil ? true : "\(self!)".isEmpty
     }
@@ -30,7 +30,7 @@ extension StaticString? {
     ///
     /// A property of a static string that allows you to conveniently check whether it matches the nil value.
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public var isNil: Bool {
         self == nil
     }

@@ -15,7 +15,7 @@ import SwiftUI
 
 // MARK: - HexConverter
 
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 final class HexConverter: HexConvertible {
 
     // MARK: - Init

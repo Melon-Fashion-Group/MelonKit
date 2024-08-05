@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNDevice.Software.Process
 
+@available(iOS 17.0, *)
 extension MLNDevice.Software {
 
     // MARK: - Public structures

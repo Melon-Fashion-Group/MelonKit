@@ -22,6 +22,6 @@ extension StaticString {
     ///
     /// A property of a static string that allows you to conveniently specify its emptiness.
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public static let empty: Self = .init()
 }

@@ -18,7 +18,7 @@ import Foundation
 ///
 /// Список типов объектов, хранящихся в контейнере.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public enum MLNServiceType {
 
     ///

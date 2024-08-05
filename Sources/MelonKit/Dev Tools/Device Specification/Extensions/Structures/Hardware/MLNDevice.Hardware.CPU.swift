@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNDevice.Hardware.CPU
 
+@available(iOS 17.0, *)
 extension MLNDevice.Hardware {
 
     // MARK: - Public structures

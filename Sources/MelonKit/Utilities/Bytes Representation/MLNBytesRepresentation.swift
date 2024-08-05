@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A class that allows you to convert bytes to another available unit of measurement.
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public final class MLNBytesRepresentation: MLNBytesRepresentable {
 
     // MARK: - Init

@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNDevice.General.ThermalState
 
+@available(iOS 17.0, *)
 extension MLNDevice.General {
 
     // MARK: - Public enumerations

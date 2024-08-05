@@ -15,7 +15,7 @@ import SwiftUI
 
 // MARK: - UIViewControllerLivePreview
 
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 struct UIViewControllerLivePreview: UIViewControllerRepresentable {
 
     // MARK: - Private properties
