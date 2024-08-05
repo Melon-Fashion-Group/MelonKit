@@ -17,6 +17,8 @@ import Foundation
 
 extension MLNHapticFeedback {
 
+    // MARK: - Public enumerations
+
     ///
     /// List of available tactile feedback intensities.
     ///

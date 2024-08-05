@@ -1,0 +1,15 @@
+{
+  "originHash" : "186db4ecfe19cb2010ad3fb61aebddbcaebf8570e5bee03aaaaa5ce293f96a09",
+  "pins" : [
+    {
+      "identity" : "subrosakit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lofticries-Games/SubrosaKit",
+      "state" : {
+        "revision" : "0b09ca4b4fa8718e0d286a20aee7446b82600bfe",
+        "version" : "1.1.3"
+      }
+    }
+  ],
+  "version" : 3
+}
