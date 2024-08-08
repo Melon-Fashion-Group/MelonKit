@@ -35,10 +35,10 @@ struct TabBarContentView: View {
             let size = geometry.size
 
             if let animation {
-                multipleViews(width: size.width, height: size.height)
+                contentView(width: size.width, height: size.height)
                     .animation(animation, value: selectedTab)
             } else {
-                singleView(width: size.width, height: size.height)
+                contentView(width: size.width, height: size.height)
             }
         }
     }
@@ -64,7 +64,7 @@ struct TabBarContentView: View {
     // MARK: - UI
 
     @ViewBuilder
-    private func multipleViews(width: CGFloat, height: CGFloat) -> some View {
+    private func contentView(width: CGFloat, height: CGFloat) -> some View {
         HStack(spacing: .zero) {
             ForEach(.zero ..< views.count, id: \.self) { index in
                 views[index]
@@ -73,11 +73,5 @@ struct TabBarContentView: View {
         }
         .frame(width: width * .init(views.count), height: height)
         .offset(x: width * -.init(selectedTab))
-    }
-
-    @ViewBuilder
-    private func singleView(width: CGFloat, height: CGFloat) -> some View {
-        views[selectedTab]
-            .frame(width: width, height: height)
     }
 }
