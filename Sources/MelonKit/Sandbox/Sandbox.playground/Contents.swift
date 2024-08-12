@@ -21,13 +21,12 @@ import Foundation
 
 // MARK: - Helpers
 
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public typealias MLNObject = AnyObject & CustomDebugStringConvertible
 
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public protocol MLNServiceable: MLNObject { }
 
-@available(iOS 17.0, *)
 extension MLNServiceable {
     public var debugDescription: String {
         "This class supports Dependency Injection and can be registered via MLNServiceContainer"

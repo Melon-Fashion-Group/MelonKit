@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - MLNDevice.OperatingSystem.Version
 
-@available(iOS 17.0, *)
 extension MLNDevice.OperatingSystem {
 
     // MARK: - Public structures

@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol that describes information about the current device, as well as its hardware and software.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public protocol MLNDeviceSpecificationable: MLNServiceable {
 
     // MARK: - Public properties

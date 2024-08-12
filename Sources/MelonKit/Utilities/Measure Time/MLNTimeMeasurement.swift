@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A class that implements the ability to measure the execution time of a block of code.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public final class MLNTimeMeasurement: MLNTimeMeasurable {
 
     // MARK: - Public methods

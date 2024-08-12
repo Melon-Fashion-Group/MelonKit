@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - MLNFramework.Build
 
-@available(iOS 17.0, *)
 extension MLNFramework {
 
     // MARK: - Public typealiases

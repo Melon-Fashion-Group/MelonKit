@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - CustomDebugStringConvertible
 
-@available(iOS 17.0, *)
 extension MLNServiceable {
 
     // MARK: - Public properties

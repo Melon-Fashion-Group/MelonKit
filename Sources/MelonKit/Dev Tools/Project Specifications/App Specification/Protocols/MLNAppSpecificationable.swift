@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol that describes the app specification.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public protocol MLNAppSpecificationable: MLNServiceable {
 
     // MARK: - Public properties

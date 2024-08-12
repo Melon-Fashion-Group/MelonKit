@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A class that implements the ability to add and extract dependencies from a DI container.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public final class MLNServiceContainer: MLNServiceContainerable {
 
     // MARK: - Private properties

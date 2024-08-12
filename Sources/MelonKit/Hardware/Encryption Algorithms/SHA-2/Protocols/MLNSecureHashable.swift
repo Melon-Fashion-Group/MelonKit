@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol that describes the ability to hash a string using the SHA-2 algorithm.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public protocol MLNSecureHashable: MLNServiceable {
 
     // MARK: - Public methods

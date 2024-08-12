@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - MLNHapticFeedback.Intensity
 
-@available(iOS 17.0, *)
 extension MLNHapticFeedback {
 
     // MARK: - Public enumerations

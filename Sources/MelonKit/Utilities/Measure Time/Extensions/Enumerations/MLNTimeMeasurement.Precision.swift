@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - MLNTimeMeasurement.Precision
 
-@available(iOS 17.0, *)
 extension MLNTimeMeasurement {
 
     // MARK: - Public enumerations

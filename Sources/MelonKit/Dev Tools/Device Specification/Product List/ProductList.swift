@@ -15,7 +15,7 @@ import Foundation
 
 // MARK: - ProductList
 
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 final class ProductList: ProductListable {
 
     // MARK: - Public properties
@@ -28,6 +28,13 @@ final class ProductList: ProductListable {
 
     // Apple iPhone's
     private let smartphones: [String: String] = [
+        "iPhone10,1": "iPhone 8",
+        "iPhone10,4": "iPhone 8",
+        "iPhone10,2": "iPhone 8 Plus",
+        "iPhone10,5": "iPhone 8 Plus",
+        "iPhone10,3": "iPhone X",
+        "iPhone10,6": "iPhone X",
+
         "iPhone11,2": "iPhone XS",
         "iPhone11,6": "iPhone XS Max",
         "iPhone11,8": "iPhone XR",
@@ -63,6 +70,14 @@ final class ProductList: ProductListable {
 
     // Apple iPad's
     private let tablets: [String: String] = [
+        "iPad6,7": "iPad Pro 12.9-inch (1st generation) (Wi-Fi)",
+        "iPad6,8": "iPad Pro 12.9-inch (1st generation) (Wi-Fi + Cellular)",
+        "iPad6,3": "iPad Pro (9.7-inch) (Wi-Fi)",
+        "iPad6,4": "iPad Pro (9.7-inch) (Wi-Fi + Cellular)",
+
+        "iPad6,11": "iPad (5th generation) (Wi-Fi)",
+        "iPad6,12": "iPad (5th generation) (Wi-Fi + Cellular)",
+
         "iPad7,3": "iPad Pro (10.5-inch) (Wi-Fi)",
         "iPad7,4": "iPad Pro (10.5-inch) (Wi-Fi + Cellular)",
         "iPad7,1": "iPad Pro (12.9-inch) (2nd generation) (Wi-Fi)",

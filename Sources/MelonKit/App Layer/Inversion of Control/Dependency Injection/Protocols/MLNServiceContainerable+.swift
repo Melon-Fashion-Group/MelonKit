@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - MLNServiceContainerable+
 
-@available(iOS 17.0, *)
 extension MLNServiceContainerable {
 
     // MARK: - Public properties

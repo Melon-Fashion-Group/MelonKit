@@ -17,7 +17,6 @@ import UIKit
 
 // MARK: - MLNDevice.General.Battery
 
-@available(iOS 17.0, *)
 extension MLNDevice.General {
 
     // MARK: - Public structures

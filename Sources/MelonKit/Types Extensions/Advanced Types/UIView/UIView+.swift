@@ -35,7 +35,7 @@ extension UIView {
     ///
     /// - Returns: A view supported by SwiftUI Canvas that implements the View protocol.
     ///
-    @available(iOS 17.0, *)
+    @available(iOS 16.0, *)
     public func livePreview() -> some View {
         UIViewLivePreview(view: self)
     }

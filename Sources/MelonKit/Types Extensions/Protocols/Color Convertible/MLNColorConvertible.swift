@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol describing the implementation of color conversion from or to hexadecimal number system.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public protocol MLNColorConvertible: Any {
 
     // MARK: - Init

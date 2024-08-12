@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - CustomStringConvertible
 
-@available(iOS 17.0, *)
 extension MLNDevice.OperatingSystem.Version: CustomStringConvertible {
     
     // MARK: - Public properties

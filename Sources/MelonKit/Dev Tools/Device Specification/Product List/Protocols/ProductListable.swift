@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - ProductListable
 
-@available(iOS 17.0, *)
 protocol ProductListable: AnyObject {
 
     // MARK: - Public properties

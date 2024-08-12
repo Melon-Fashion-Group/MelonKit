@@ -19,7 +19,7 @@ import SubrosaKit
 ///
 /// A class that implements the ability to hash a string using the SHA-2 algorithm.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public final class MLNSecureHashing: MLNSecureHashable {
 
     // MARK: - Private properties

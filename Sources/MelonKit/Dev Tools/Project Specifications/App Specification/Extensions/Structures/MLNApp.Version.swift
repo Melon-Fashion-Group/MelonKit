@@ -15,7 +15,6 @@ import Foundation
 
 // MARK: - MLNApp.Version
 
-@available(iOS 17.0, *)
 extension MLNApp {
 
     // MARK: - Public structures

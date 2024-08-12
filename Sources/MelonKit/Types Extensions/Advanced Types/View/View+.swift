@@ -41,7 +41,7 @@ extension View {
     ///
     /// - Returns: View with a frame drawn for debugging.
     ///
-    @available(iOS 17.0, *)
+    @available(iOS 16.0, *)
     public func drawDebugFrame(
         color: Color = [.red, .green, .blue].randomElement()!,
         filling: Bool = true
@@ -54,38 +54,5 @@ extension View {
                 }
             }
             .border(color.opacity(0.5), width: 1)
-    }
-}
-
-
-
-// MARK: - MLNTabBarView
-
-extension View {
-
-    // MARK: - Public methods
-
-    ///
-    ///
-    ///
-    @available(iOS 17.0, *)
-    public func tabBarStyle(_ style: MLNTabBarView.TabBarStyle) -> some View {
-        environment(\.tabBarStyle, style)
-    }
-
-    ///
-    ///
-    ///
-    @available(iOS 17.0, *)
-    public func tabStyle(_ style: MLNTabBarView.TabStyle) -> some View {
-        environment(\.tabStyle, style)
-    }
-
-    ///
-    ///
-    ///
-    @available(iOS 17.0, *)
-    public func badgeStyle(_ style: MLNTabBarView.BadgeStyle) -> some View {
-        environment(\.badgeStyle, style)
     }
 }

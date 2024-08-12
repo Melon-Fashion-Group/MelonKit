@@ -18,7 +18,7 @@ import UIKit
 ///
 /// A class that implements the operation of  Haptic Feedback.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public final class MLNHapticFeedback: MLNHapticFeedbackExecutable {
 
     // MARK: - Init

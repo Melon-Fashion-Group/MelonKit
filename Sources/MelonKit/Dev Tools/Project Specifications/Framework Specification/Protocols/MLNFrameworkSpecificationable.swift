@@ -18,7 +18,7 @@ import Foundation
 ///
 /// A protocol that describes the framework specification.
 ///
-@available(iOS 17.0, *)
+@available(iOS 16.0, *)
 public protocol MLNFrameworkSpecificationable: MLNServiceable {
 
     // MARK: - Public properties
