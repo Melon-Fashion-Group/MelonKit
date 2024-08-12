@@ -30,6 +30,10 @@ extension MLNPageIndicatorView {
 
         let spacing: CGFloat
 
+        let size: Size
+
+        let displayedCount: Int
+
         let animation: Animation?
 
 
@@ -42,11 +46,17 @@ extension MLNPageIndicatorView {
         public init(
             colors: Colors = .init(),
             spacing: CGFloat = .zero,
+            size: Size = .init(),
+            displayedCount: Int = 2,
             animation: Animation? = nil
         ) {
             self.colors = colors
 
             self.spacing = spacing
+
+            self.size = size
+
+            self.displayedCount = displayedCount
 
             self.animation = animation
         }

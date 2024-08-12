@@ -26,6 +26,8 @@ struct VerticalPageIndicatorView: View {
 
     private let style: MLNPageIndicatorView.IndicatorStyle
 
+    private let overallHeight: CGFloat
+
 
 
     // MARK: - Body
@@ -36,6 +38,7 @@ struct VerticalPageIndicatorView: View {
                 LazyVStack(spacing: style.spacing) {
                     ForEach(.zero ..< indicators.count, id: \.self) { index in
                         indicators[index].view
+                            .frame(width: style.size.width, height: style.size.height)
                             .foregroundStyle(selectedIndicator == index ? style.colors.active : style.colors.inactive)
                             .id(index)
                     }
@@ -50,6 +53,7 @@ struct VerticalPageIndicatorView: View {
             }
             .animation(style.animation, value: selectedIndicator)
         }
+        .frame(width: style.size.width, height: overallHeight)
     }
 
 
@@ -66,5 +70,9 @@ struct VerticalPageIndicatorView: View {
         self.indicators = indicators
 
         self.style = style
+
+        let indicatorsHeight = style.size.height * .init(style.displayedCount)
+        let spacingsHeight = style.spacing * .init(style.displayedCount - 1)
+        overallHeight = indicatorsHeight + spacingsHeight
     }
 }

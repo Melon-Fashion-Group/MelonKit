@@ -26,6 +26,8 @@ struct HorizontalPageIndicatorView: View {
 
     private let style: MLNPageIndicatorView.IndicatorStyle
 
+    private let overallWidth: CGFloat
+
 
 
     // MARK: - Body
@@ -36,6 +38,7 @@ struct HorizontalPageIndicatorView: View {
                 LazyHStack(spacing: style.spacing) {
                     ForEach(.zero ..< indicators.count, id: \.self) { index in
                         indicators[index].view
+                            .frame(width: style.size.width, height: style.size.height)
                             .foregroundStyle(selectedIndicator == index ? style.colors.active : style.colors.inactive)
                             .id(index)
                     }
@@ -50,6 +53,7 @@ struct HorizontalPageIndicatorView: View {
             }
             .animation(style.animation, value: selectedIndicator)
         }
+        .frame(width: overallWidth, height: style.size.height)
     }
 
 
@@ -66,5 +70,9 @@ struct HorizontalPageIndicatorView: View {
         self.indicators = indicators
 
         self.style = style
+
+        let indicatorsWidth = style.size.width * .init(style.displayedCount)
+        let spacingsWidth = style.spacing * .init(style.displayedCount - 1)
+        overallWidth = indicatorsWidth + spacingsWidth
     }
 }
