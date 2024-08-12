@@ -56,3 +56,53 @@ extension View {
             .border(color.opacity(0.5), width: 1)
     }
 }
+
+
+
+// MARK: - MLNPageIndicatorView
+
+extension View {
+
+    // MARK: - Public methods
+
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public func pageIndicatorStyle(_ style: MLNPageIndicatorView.IndicatorStyle) -> some View {
+        environment(\.pageIndicatorStyle, style)
+    }
+}
+
+
+
+// MARK: - MLNTabBarView
+
+extension View {
+
+    // MARK: - Public methods
+
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public func tabBarStyle(_ style: MLNTabBarView.TabBarStyle) -> some View {
+        environment(\.tabBarStyle, style)
+    }
+
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public func tabStyle(_ style: MLNTabBarView.TabStyle) -> some View {
+        environment(\.tabStyle, style)
+    }
+
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public func badgeStyle(_ style: MLNTabBarView.BadgeStyle) -> some View {
+        environment(\.badgeStyle, style)
+    }
+}
