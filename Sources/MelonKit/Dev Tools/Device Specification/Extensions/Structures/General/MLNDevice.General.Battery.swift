@@ -36,7 +36,7 @@ extension MLNDevice.General {
         ///
         /// The battery charge level for the device.
         ///
-        public let level: UInt8
+        public let level: Int
 
 
 
