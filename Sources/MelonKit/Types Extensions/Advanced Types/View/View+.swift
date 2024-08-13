@@ -106,3 +106,21 @@ extension View {
         environment(\.badgeStyle, style)
     }
 }
+
+
+
+// MARK: - ShimeEffectModifier
+
+extension View {
+
+    // MARK: - Public methods
+
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public func shimeEffect(_ style: MLNShimeEffectStyle) -> some View {
+        self
+            .modifier(ShimeEffectModifier(style: style))
+    }
+}
