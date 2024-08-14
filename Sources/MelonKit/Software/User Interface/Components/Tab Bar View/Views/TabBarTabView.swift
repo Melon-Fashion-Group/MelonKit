@@ -83,6 +83,11 @@ struct TabBarTabView: View {
                             isSelected: selectedTab == index,
                             style: badgeStyle
                         )
+                        .transition(
+                            .scale
+                                .combined(with: .opacity)
+                                .animation(badgeStyle.animation)
+                        )
                     }
                 }
 

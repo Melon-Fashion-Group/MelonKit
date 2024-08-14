@@ -34,6 +34,8 @@ extension MLNTabBarView {
 
         let offset: Offset
 
+        let animation: Animation?
+
 
 
         // MARK: - Init
@@ -45,7 +47,8 @@ extension MLNTabBarView {
             colors: Colors = .init(),
             font: Font = .system(size: 10, weight: .bold),
             padding: Padding = .init(),
-            offset: Offset = .init()
+            offset: Offset = .init(),
+            animation: Animation? = nil
         ) {
             self.colors = colors
 
@@ -54,6 +57,8 @@ extension MLNTabBarView {
             self.padding = padding
 
             self.offset = offset
+
+            self.animation = animation
         }
     }
 }

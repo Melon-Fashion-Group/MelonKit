@@ -37,9 +37,9 @@ struct TabBarContentView: View {
             let size = geometry.size
 
             if let _ = animation {
-                multipleViews(width: size.width, height: size.height)
+                multipleViews(size: size)
             } else {
-                singleView(width: size.width, height: size.height)
+                singleView(size: size)
             }
         }
     }
@@ -68,25 +68,25 @@ struct TabBarContentView: View {
     // MARK: - UI
 
     @ViewBuilder
-    private func multipleViews(width: CGFloat, height: CGFloat) -> some View {
+    private func multipleViews(size: CGSize) -> some View {
         switch transition {
         case .scale:
-            ScaledViews(selection: selectedTab, views: views, width: width, height: height, animation: animation)
+            TabBarScaledViews(selection: selectedTab, views: views, size: size, animation: animation)
         case .slide:
-            SlidedViews(selection: selectedTab, views: views, width: width, height: height, animation: animation)
+            TabBarSlidedViews(selection: selectedTab, views: views, size: size, animation: animation)
         case .overlap:
-            OverlappedViews(selection: selectedTab, views: views, width: width, height: height, animation: animation)
+            TabBarOverlappedViews(selection: selectedTab, views: views, size: size, animation: animation)
         case .overlay:
-            OverlayedViews(selection: selectedTab, views: views, width: width, height: height, animation: animation)
+            TabBarOverlayedViews(selection: selectedTab, views: views, size: size, animation: animation)
         }
     }
 
     @ViewBuilder
-    private func singleView(width: CGFloat, height: CGFloat) -> some View {
+    private func singleView(size: CGSize) -> some View {
         ZStack {
             ForEach(.zero ..< views.count, id: \.self) { index in
                 views[index]
-                    .frame(width: width, height: height)
+                    .frame(width: size.width, height: size.height)
                     .zIndex(selectedTab == index ? .init(views.count) : .zero)
             }
         }

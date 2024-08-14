@@ -1,5 +1,5 @@
 //
-//  OverlayedViews.swift
+//  TabBarOverlayedViews.swift
 //  MelonKit
 //
 //  Created by Dimka Novikov on 10.08.2024.
@@ -13,10 +13,10 @@ import SwiftUI
 
 
 
-// MARK: - OverlayedViews
+// MARK: - TabBarOverlayedViews
 
 @available(iOS 16.0, *)
-struct OverlayedViews: View {
+struct TabBarOverlayedViews: View {
 
     // MARK: - Private properties
 
@@ -24,8 +24,7 @@ struct OverlayedViews: View {
 
     private let views: [AnyView]
 
-    private let width: CGFloat
-    private let height: CGFloat
+    private let size: CGSize
 
     private let animation: Animation?
 
@@ -36,10 +35,10 @@ struct OverlayedViews: View {
     var body: some View {
         ZStack {
             ForEach(.zero ..< views.count, id: \.self) { index in
-                let offset = computeOffset(by: index, with: width)
+                let offset = computeOffset(by: index, with: size.width)
 
                 views[index]
-                    .frame(width: width, height: height)
+                    .frame(width: size.width, height: size.height)
                     .offset(x: offset)
                     .blur(radius: index < selectedIndex ? 10 : .zero)
                     .animation(animation, value: selectedIndex)
@@ -54,16 +53,14 @@ struct OverlayedViews: View {
     init(
         selection: Int,
         views: [AnyView],
-        width: CGFloat,
-        height: CGFloat,
+        size: CGSize,
         animation: Animation?
     ) {
         selectedIndex = selection
 
         self.views = views
 
-        self.width = width
-        self.height = height
+        self.size = size
 
         self.animation = animation
     }

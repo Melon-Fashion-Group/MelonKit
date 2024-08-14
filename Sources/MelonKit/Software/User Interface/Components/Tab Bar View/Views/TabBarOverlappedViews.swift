@@ -1,5 +1,5 @@
 //
-//  SlidedViews.swift
+//  TabBarOverlappedViews.swift
 //  MelonKit
 //
 //  Created by Dimka Novikov on 10.08.2024.
@@ -13,10 +13,10 @@ import SwiftUI
 
 
 
-// MARK: - SlidedViews
+// MARK: - TabBarOverlappedViews
 
 @available(iOS 16.0, *)
-struct SlidedViews: View {
+struct TabBarOverlappedViews: View {
 
     // MARK: - Private properties
 
@@ -24,8 +24,7 @@ struct SlidedViews: View {
 
     private let views: [AnyView]
 
-    private let width: CGFloat
-    private let height: CGFloat
+    private let size: CGSize
 
     private let animation: Animation?
 
@@ -34,15 +33,19 @@ struct SlidedViews: View {
     // MARK: - Body
 
     var body: some View {
-        HStack(spacing: .zero) {
+        ZStack {
             ForEach(.zero ..< views.count, id: \.self) { index in
+                let isFarView = index < selectedIndex
+                let isNearView = index > selectedIndex
+
                 views[index]
-                    .frame(width: width, height: height)
+                    .frame(width: size.width, height: size.height)
+                    .scaleEffect(isNearView ? .init(width: 1.05, height: 1.05) : .identity)
+                    .opacity(isNearView ? .zero : 1)
+                    .blur(radius: isFarView ? 10 : .zero)
+                    .animation(animation, value: selectedIndex)
             }
         }
-        .frame(width: width * .init(views.count), height: height)
-        .offset(x: width * -.init(selectedIndex))
-        .animation(animation, value: selectedIndex)
     }
 
 
@@ -52,16 +55,14 @@ struct SlidedViews: View {
     init(
         selection: Int,
         views: [AnyView],
-        width: CGFloat,
-        height: CGFloat,
+        size: CGSize,
         animation: Animation?
     ) {
         selectedIndex = selection
 
         self.views = views
 
-        self.width = width
-        self.height = height
+        self.size = size
 
         self.animation = animation
     }

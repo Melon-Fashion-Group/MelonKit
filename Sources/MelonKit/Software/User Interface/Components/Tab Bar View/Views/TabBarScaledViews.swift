@@ -1,5 +1,5 @@
 //
-//  ScaledViews.swift
+//  TabBarScaledViews.swift
 //  MelonKit
 //
 //  Created by Dimka Novikov on 10.08.2024.
@@ -13,10 +13,10 @@ import SwiftUI
 
 
 
-// MARK: - ScaledViews
+// MARK: - TabBarScaledViews
 
 @available(iOS 16.0, *)
-struct ScaledViews: View {
+struct TabBarScaledViews: View {
 
     // MARK: - Private properties
 
@@ -24,8 +24,7 @@ struct ScaledViews: View {
 
     private let views: [AnyView]
 
-    private let width: CGFloat
-    private let height: CGFloat
+    private let size: CGSize
 
     private let animation: Animation?
 
@@ -37,7 +36,7 @@ struct ScaledViews: View {
         ZStack {
             ForEach(.zero ..< views.count, id: \.self) { index in
                 views[index]
-                    .frame(width: width, height: height)
+                    .frame(width: size.width, height: size.height)
                     .zIndex(selectedIndex == index ? .init(views.count) : .zero)
                     .scaleEffect(selectedIndex == index ? .identity : .init(width: 0.99, height: 0.99))
                     .opacity(selectedIndex == index ? 1 : .zero)
@@ -53,16 +52,14 @@ struct ScaledViews: View {
     init(
         selection: Int,
         views: [AnyView],
-        width: CGFloat,
-        height: CGFloat,
+        size: CGSize,
         animation: Animation?
     ) {
         selectedIndex = selection
 
         self.views = views
 
-        self.width = width
-        self.height = height
+        self.size = size
 
         self.animation = animation
     }
