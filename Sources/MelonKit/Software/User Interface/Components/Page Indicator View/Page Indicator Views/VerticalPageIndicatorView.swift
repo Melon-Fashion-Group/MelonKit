@@ -48,7 +48,7 @@ struct VerticalPageIndicatorView: View {
             .scrollDisabled(true)
             .onChange(of: selectedIndicator) { _ in
                 withAnimation(style.animation) {
-                    scrollView.scrollTo(selectedIndicator)
+                    scrollView.scrollTo(selectedIndicator, anchor: .center)
                 }
             }
             .animation(style.animation, value: selectedIndicator)
