@@ -42,7 +42,7 @@ struct TabBarTabView: View {
                         .padding(.top, 6)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .buttonStyle(TabBarTabStyle(animation: tabStyle.animation))
+                .buttonStyle(TabStyle(animation: tabStyle.animation))
             }
         }
         .clipped()
@@ -65,6 +65,10 @@ struct TabBarTabView: View {
         self.tabStyle = tabStyle
         self.badgeStyle = badgeStyle
     }
+
+
+
+    // MARK: - UI
 
     @ViewBuilder
     private func tabView(
