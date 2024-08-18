@@ -9,6 +9,7 @@
 
 // MARK: Import section
 
+import AVKit
 import SwiftUI
 
 
@@ -122,5 +123,28 @@ extension View {
     public func shimeEffect(_ style: MLNShimeEffectStyle) -> some View {
         self
             .modifier(ShimeEffectModifier(style: style))
+    }
+}
+
+
+
+// MARK: - MLNVideoPlayerView
+
+extension View {
+
+    // MARK: - Public methods
+
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public func playerVideoScaling(_ scaling: MLNVideoPlayer.VideoScaling) -> some View {
+        let videoGravity: AVLayerVideoGravity = switch scaling {
+        case .resize: .resize
+        case .aspectFit: .resizeAspect
+        case .aspectFill: .resizeAspectFill
+        }
+
+        return environment(\.videoGravity, videoGravity)
     }
 }

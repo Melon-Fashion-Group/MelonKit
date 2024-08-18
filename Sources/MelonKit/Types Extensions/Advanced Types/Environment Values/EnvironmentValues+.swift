@@ -9,6 +9,7 @@
 
 // MARK: Import section
 
+import AVKit
 import SwiftUI
 
 
@@ -119,3 +120,29 @@ extension EnvironmentValues {
     }
 }
 
+
+
+// MARK: - MLNVideoPlayerView
+
+extension EnvironmentValues {
+
+    // MARK: - Private structures
+
+    @available(iOS 16.0, *)
+    private struct VideoGravityKey: EnvironmentKey {
+
+        // MARK: - Public properties
+
+        static let defaultValue: AVLayerVideoGravity = .resizeAspect
+    }
+
+
+
+    // MARK: - Public properties
+
+    @available(iOS 16.0, *)
+    var videoGravity: AVLayerVideoGravity {
+        get { self[VideoGravityKey.self] }
+        set { self[VideoGravityKey.self] = newValue }
+    }
+}
