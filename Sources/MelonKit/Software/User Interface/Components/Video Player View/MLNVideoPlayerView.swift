@@ -48,8 +48,8 @@ public struct MLNVideoPlayerView<LoaderView: View, ErrorView: View>: View {
             }
         }
         .task(priority: .background) {
-            await viewModel.load { url in
-                player.setupPlayer(with: url)
+            await viewModel.load { fileURL in
+                player.setupPlayer(with: fileURL)
             }
         }
     }
@@ -80,8 +80,8 @@ public struct MLNVideoPlayerView<LoaderView: View, ErrorView: View>: View {
 
     private func reload() {
         Task(priority: .background) {
-            await viewModel.reload { url in
-                player.setupPlayer(with: url)
+            await viewModel.reload { fileURL in
+                player.setupPlayer(with: fileURL)
             }
         }
     }

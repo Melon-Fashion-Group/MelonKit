@@ -43,7 +43,7 @@ final class VideoPlayerVM: VideoPlayerViewModellable {
 
     // MARK: - Public methods
 
-    func load(_ completion: (_ url: URL) -> Void) async {
+    func load(_ completion: (_ fileURL: URL) -> Void) async {
         // Loading video data
         guard
             let (data, response) = try? await URLSession.shared.data(for: urlRequest),
@@ -79,7 +79,7 @@ final class VideoPlayerVM: VideoPlayerViewModellable {
         }
     }
 
-    func reload(_ completion: (_ url: URL) -> Void) async {
+    func reload(_ completion: (_ fileURL: URL) -> Void) async {
         await MainActor.run { state = .loading }
 
         await load(completion)
