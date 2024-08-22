@@ -2,7 +2,7 @@
 //  MLNPageScrollView.swift
 //  MelonKit
 //
-//  Created by Dimka Novikov on 11.08.2024.
+//  Created by Dimka Novikov on 22.08.2024.
 //  Copyright © 2024 Melon Fashion Group. All rights reserved.
 //
 
@@ -18,7 +18,7 @@ import SwiftUI
 ///
 ///
 ///
-@available(iOS 18.0, *)
+@available(iOS 17.0, *)
 public struct MLNPageScrollView<ContentView: View>: View {
 
     // MARK: - Private properties

@@ -2,7 +2,7 @@
 //  MLNPageScrollView.Axis.swift
 //  MelonKit
 //
-//  Created by Dimka Novikov on 11.08.2024.
+//  Created by Dimka Novikov on 22.08.2024.
 //  Copyright © 2024 Melon Fashion Group. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ import SwiftUI
 
 // MARK: - MLNPageScrollView.Axis
 
-@available(iOS 18.0, *)
+@available(iOS 17.0, *)
 extension MLNPageScrollView {
 
     // MARK: - Public enumerations
