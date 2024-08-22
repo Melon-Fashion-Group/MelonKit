@@ -2,7 +2,7 @@
 //  HorizontalPageTabView.swift
 //  MelonKit
 //
-//  Created by Dimka Novikov on 09.08.2024.
+//  Created by Dimka Novikov on 22.08.2024.
 //  Copyright © 2024 Melon Fashion Group. All rights reserved.
 //
 
@@ -22,18 +22,21 @@ struct HorizontalPageTabView<ContentView: View>: View {
 
     @Binding private var selectedPage: Int
 
-    private let contentView: ContentView
+    private let contentView: (_ size: CGSize) -> ContentView
 
 
 
     // MARK: - Body
 
     var body: some View {
-        TabView(selection: $selectedPage) {
-            contentView
+        GeometryReader { geometry in
+            let size = geometry.size
+
+            TabView(selection: $selectedPage) {
+                contentView(size)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
         }
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .animation(.smooth(duration: 0.3), value: selectedPage)
     }
 
 
@@ -42,7 +45,7 @@ struct HorizontalPageTabView<ContentView: View>: View {
 
     init(
         selection: Binding<Int>,
-        contentView: ContentView
+        contentView: @escaping (_: CGSize) -> ContentView
     ) {
         _selectedPage = selection
 

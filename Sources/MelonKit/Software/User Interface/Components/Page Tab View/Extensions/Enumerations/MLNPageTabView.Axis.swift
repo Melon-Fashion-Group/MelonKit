@@ -2,14 +2,14 @@
 //  MLNPageTabView.Axis.swift
 //  MelonKit
 //
-//  Created by Dimka Novikov on 09.08.2024.
+//  Created by Dimka Novikov on 22.08.2024.
 //  Copyright © 2024 Melon Fashion Group. All rights reserved.
 //
 
 
 // MARK: Import section
 
-import Foundation
+import SwiftUI
 
 
 

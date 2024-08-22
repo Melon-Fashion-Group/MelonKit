@@ -148,3 +148,20 @@ extension View {
         return environment(\.videoGravity, videoGravity)
     }
 }
+
+
+
+// MARK: - MLNPageTabView
+
+extension View {
+
+    // MARK: - Public methods
+
+    ///
+    ///
+    ///
+    @available(iOS, introduced: 16.0, deprecated: 17.0, message: "Used only with the MLNPageTabView UI component")
+    public func pageTabViewSafeAreaIgnored() -> some View {
+        environment(\.isSafeAreaIgnored, true)
+    }
+}

@@ -2,7 +2,7 @@
 //  MLNPageTabView.swift
 //  MelonKit
 //
-//  Created by Dimka Novikov on 09.08.2024.
+//  Created by Dimka Novikov on 22.08.2024.
 //  Copyright © 2024 Melon Fashion Group. All rights reserved.
 //
 
@@ -18,7 +18,7 @@ import SwiftUI
 ///
 ///
 ///
-@available(iOS, introduced: 16.0, deprecated: 18.0, message: "This UI component is deprecated, use MLNPageScrollView instead")
+@available(iOS, introduced: 16.0, deprecated: 17.0, message: "This UI component is deprecated, use MLNPageScrollView instead")
 public struct MLNPageTabView<ContentView: View>: View {
 
     // MARK: - Private properties
@@ -27,9 +27,9 @@ public struct MLNPageTabView<ContentView: View>: View {
 
     @Binding private var selectedPage: Int
 
-    private let offset: Offset
+    private let contentView: (_ size: CGSize) -> ContentView
 
-    private let contentView: ContentView
+    @Environment(\.isSafeAreaIgnored) private var isSafeAreaIgnored
 
 
 
@@ -45,7 +45,7 @@ public struct MLNPageTabView<ContentView: View>: View {
         case .vertical:
             VerticalPageTabView(
                 selection: $selectedPage,
-                offset: (offset.x, offset.y),
+                isSafeAreaIgnored: isSafeAreaIgnored,
                 contentView: contentView
             )
         }
@@ -55,21 +55,15 @@ public struct MLNPageTabView<ContentView: View>: View {
 
     // MARK: - Init
 
-    ///
-    ///
-    ///
     public init(
         axis: Axis = .horizontal,
         selection: Binding<Int>,
-        offset: Offset = .init(),
-        @ViewBuilder contentView: () -> ContentView
+        @ViewBuilder contentView: @escaping (_ size: CGSize) -> ContentView
     ) {
         self.axis = axis
 
         _selectedPage = selection
 
-        self.offset = offset
-
-        self.contentView = contentView()
+        self.contentView = contentView
     }
 }

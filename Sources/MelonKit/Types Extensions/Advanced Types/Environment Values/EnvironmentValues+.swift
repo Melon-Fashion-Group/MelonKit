@@ -146,3 +146,28 @@ extension EnvironmentValues {
         set { self[VideoGravityKey.self] = newValue }
     }
 }
+
+
+
+// MARK: - MLNPageTabView
+
+extension EnvironmentValues {
+
+    // MARK: - Private structures
+
+    private struct SafeAreaIgnoresKey: EnvironmentKey {
+
+        // MARK: - Public properties
+
+        static let defaultValue: Bool = false
+    }
+
+
+
+    // MARK: - Public properties
+
+    var isSafeAreaIgnored: Bool {
+        get { self[SafeAreaIgnoresKey.self] }
+        set { self[SafeAreaIgnoresKey.self] = newValue }
+    }
+}
