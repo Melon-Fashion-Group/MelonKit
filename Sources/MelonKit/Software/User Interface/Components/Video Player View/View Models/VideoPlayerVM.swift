@@ -29,6 +29,8 @@ final class VideoPlayerVM: VideoPlayerViewModellable {
         return fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!
     }()
 
+    private let fileManager = FileManager.default
+
     @Published private(set) var state: VideoPlayerVM.State = .loading
 
 
@@ -44,17 +46,6 @@ final class VideoPlayerVM: VideoPlayerViewModellable {
     // MARK: - Public methods
 
     func load(_ completion: (_ fileURL: URL) -> Void) async {
-        // Loading video data
-        guard
-            let (data, response) = try? await URLSession.shared.data(for: urlRequest),
-            let httpResponse = response as? HTTPURLResponse,
-            httpResponse.statusCode == 200
-        else {
-            await MainActor.run { state = .error }
-
-            return
-        }
-
         // Getting file URL
         guard let url = urlRequest.url else {
             await MainActor.run { state = .error }
@@ -64,12 +55,26 @@ final class VideoPlayerVM: VideoPlayerViewModellable {
 
         let fileName = url.lastPathComponent
         let fileURL = cacheDirectoryPath.appendingPathComponent(fileName)
+        let filePath = fileURL.path()
 
-        // Caching video data
-        guard let _ = try? data.write(to: fileURL, options: .atomic) else {
-            await MainActor.run { state = .error }
+        if !fileManager.fileExists(atPath: filePath) {
+            // Loading video data
+            guard
+                let (data, response) = try? await URLSession.shared.data(for: urlRequest),
+                let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 200
+            else {
+                await MainActor.run { state = .error }
 
-            return
+                return
+            }
+
+            // Caching video data
+            guard let _ = try? data.write(to: fileURL, options: .atomic) else {
+                await MainActor.run { state = .error }
+
+                return
+            }
         }
 
         await MainActor.run {

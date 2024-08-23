@@ -33,6 +33,6 @@ protocol VideoPlayerViewModellable: ObservableObject {
 
     // MARK: - Public methods
 
-    func load(_ completion: (_ url: URL) -> Void) async
-    func reload(_ completion: (_ url: URL) -> Void) async
+    func load(_ completion: (_ fileURL: URL) -> Void) async
+    func reload(_ completion: (_ fileURL: URL) -> Void) async
 }
