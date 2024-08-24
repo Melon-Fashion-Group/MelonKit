@@ -56,6 +56,33 @@ extension View {
             }
             .border(color.opacity(0.5), width: 1)
     }
+
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public func luminanceEffect(
+        between lightColor: Color = .white,
+        and darkColor: Color = .black
+    ) -> some View {
+        self
+            .foregroundStyle(lightColor)
+            .blendMode(.difference)
+            .overlay {
+                self
+                    .blendMode(.hue)
+            }
+            .overlay {
+                self
+                    .foregroundStyle(lightColor)
+                    .blendMode(.overlay)
+            }
+            .overlay {
+                self
+                    .foregroundStyle(darkColor)
+                    .blendMode(.overlay)
+            }
+    }
 }
 
 
