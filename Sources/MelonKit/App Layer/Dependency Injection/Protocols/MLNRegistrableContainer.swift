@@ -15,17 +15,26 @@ import Foundation
 
 // MARK: - MLNRegistrableContainer
 
+///
+///
+///
 @available(iOS 16.0, *)
-@MainActor protocol MLNRegistrableContainer: MLNContainerable {
+@MainActor public protocol MLNRegistrableContainer: MLNContainerable {
 
     // MARK: - Public methods
 
+    ///
+    ///
+    ///
     func register<Service: MLNContainerable>(
         _ type: Service.Type,
         as lifetime: MLNContainer.ServiceLifetime,
         service: @escaping (_ resolver: any MLNResolvableContainer) -> Service
     )
 
+    ///
+    ///
+    ///
     func register<Service: MLNContainerable>(
         _ type: Service.Type,
         for key: String,
