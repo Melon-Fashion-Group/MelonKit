@@ -1,8 +1,8 @@
 //
-//  MLNKeychainStorage.CloudSaving.swift
+//  MLNNetworkConfiguration.Scheme.swift
 //  Melon Fashion SDK
 //
-//  Created by Dimka Novikov on 20.12.2024.
+//  Created by Dimka Novikov on 21.12.2024.
 //  Copyright © 2024 Melon Fashion Group. All rights reserved.
 //
 
@@ -13,23 +13,23 @@ import Foundation
 
 
 
-// MARK: - CloudSaving
+// MARK: - MLNNetworkConfiguration.Scheme
 
-extension MLNKeychainStorage {
+extension MLNNetworkConfiguration {
 
     ///
     ///
     ///
-    public enum CloudSaving {
+    public enum Scheme: String {
 
         ///
         ///
         ///
-        case disable
+        case http
 
         ///
         ///
         ///
-        case enable(accessGroup: String)
+        case https
     }
 }

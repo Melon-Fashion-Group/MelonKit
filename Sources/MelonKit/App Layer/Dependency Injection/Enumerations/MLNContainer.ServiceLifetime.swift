@@ -17,8 +17,6 @@ import Foundation
 
 extension MLNContainer {
 
-    // MARK: - Public enumerations
-
     ///
     ///
     ///

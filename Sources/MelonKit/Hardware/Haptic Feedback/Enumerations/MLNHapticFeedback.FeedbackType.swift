@@ -17,8 +17,6 @@ import Foundation
 
 extension MLNHapticFeedback {
 
-    // MARK: - Public enumerations
-
     ///
     ///
     ///
