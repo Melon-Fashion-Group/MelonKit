@@ -18,9 +18,8 @@ import Foundation
 ///
 ///
 ///
-@MainActor
 @available(iOS 16.0, *)
-public protocol MLNHapticFeedbackGeneratable: AnyObject {
+@MainActor public protocol MLNHapticFeedbackGeneratable: AnyObject {
 
     // MARK: - Public methods
 
