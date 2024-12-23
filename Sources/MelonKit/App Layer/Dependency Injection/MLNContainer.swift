@@ -25,6 +25,15 @@ import Foundation
 
     private var factories: [String: (any MLNResolvableContainer) -> MLNContainerable] = [:]
     private var cache: [String: MLNContainerable] = [:]
+
+
+
+    // MARK: - Init
+
+    ///
+    ///
+    ///
+    public init() { }
 }
 
 
