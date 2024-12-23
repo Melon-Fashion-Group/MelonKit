@@ -119,4 +119,18 @@ extension MLNNetworkManager.HTTPHeader {
     public static func custom(name: String, value: String) -> Self {
         .init(name: name, value: value)
     }
+
+    ///
+    ///
+    ///
+    public static func xClientSource(_ value: String) -> Self {
+        .init(name: "x-client-source", value: value)
+    }
+
+    ///
+    ///
+    ///
+    public static func xRefreshToken(_ value: String) -> Self {
+        .init(name: "x-refresh-token", value: value)
+    }
 }
