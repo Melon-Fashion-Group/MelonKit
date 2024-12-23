@@ -19,7 +19,7 @@ import Foundation
 ///
 ///
 @available(iOS 16.0, *)
-public protocol MLNKeychainLoadable: AnyObject {
+@MainActor public protocol MLNKeychainLoadable: AnyObject {
 
     // MARK: - Public methods
 
