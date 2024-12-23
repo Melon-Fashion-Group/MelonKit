@@ -132,11 +132,7 @@ public final class MLNKeychainStorage {
             ] as CFDictionary
         }
 
-        let deletionStatus = SecItemDelete(query)
-
-        guard deletionStatus == errSecSuccess else {
-            return false
-        }
+        let _ = SecItemDelete(query)
 
         let additionStatus = SecItemAdd(query, nil)
 
