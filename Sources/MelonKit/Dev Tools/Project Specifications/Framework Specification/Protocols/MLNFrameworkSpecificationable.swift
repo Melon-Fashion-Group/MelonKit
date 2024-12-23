@@ -26,10 +26,10 @@ public protocol MLNFrameworkSpecificationable: AnyObject {
     ///
     ///
     ///
-    var version: MLNFramework.Version { get }
+    var version: MLNFrameworkSpecification.Version { get }
 
     ///
     ///
     ///
-    var build: MLNFramework.Build { get }
+    var build: MLNFrameworkSpecification.Build { get }
 }

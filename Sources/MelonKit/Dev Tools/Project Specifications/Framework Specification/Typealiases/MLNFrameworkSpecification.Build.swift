@@ -1,5 +1,5 @@
 //
-//  MLNFramework.Build.swift
+//  MLNFrameworkSpecification.Build.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 21.12.2024.
@@ -13,9 +13,9 @@ import Foundation
 
 
 
-// MARK: - MLNFramework.Build
+// MARK: - MLNFrameworkSpecification.Build
 
-extension MLNFramework {
+extension MLNFrameworkSpecification {
 
     ///
     ///
