@@ -1,5 +1,5 @@
 //
-//  MLNFrameworkSpecification+.swift
+//  MLNFramework+.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 21.12.2024.
@@ -15,7 +15,7 @@ import Foundation
 
 // MARK: - CustomStringConvertible
 
-extension MLNFrameworkSpecification: CustomStringConvertible {
+extension MLNFramework: CustomStringConvertible {
 
     ///
     ///

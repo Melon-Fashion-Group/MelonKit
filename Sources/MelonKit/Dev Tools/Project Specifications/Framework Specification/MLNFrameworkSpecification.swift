@@ -1,5 +1,5 @@
 //
-//  MLNFrameworkSpecification.swift
+//  MLNFramework.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 21.12.2024.
@@ -19,7 +19,7 @@ import Foundation
 ///
 ///
 @available(iOS 16.0, *)
-public final class MLNFrameworkSpecification: MLNFrameworkSpecificationable {
+public final class MLNFramework: MLNFrameworkSpecificationable {
 
     // MARK: - Public properties
 
@@ -37,5 +37,8 @@ public final class MLNFrameworkSpecification: MLNFrameworkSpecificationable {
 
     // MARK: - Init
 
-    private init() { }
+    ///
+    ///
+    ///
+    public init() { }
 }
