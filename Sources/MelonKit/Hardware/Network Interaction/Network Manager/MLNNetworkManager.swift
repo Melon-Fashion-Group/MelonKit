@@ -56,6 +56,7 @@ import Foundation
 
     private func createRequest(
         method: HTTPMethod,
+        timeout: TimeInterval,
         url: URL,
         headers: [HTTPHeader],
         body: Data?
@@ -63,6 +64,7 @@ import Foundation
         var request = URLRequest(url: url)
 
         request.httpMethod = method.name
+        request.timeoutInterval = timeout
         request.allHTTPHeaderFields = mapHeadersToDictionary(headers)
         request.httpBody = body
 
@@ -96,7 +98,7 @@ extension MLNNetworkManager: MLNNetworkManageable {
             throw .vpnEnabled
         }
 
-        let request = createRequest(method: method, url: url, headers: headers, body: body)
+        let request = createRequest(method: method, timeout: timeout, url: url, headers: headers, body: body)
 
         guard
             let (data, response) = try? await session.data(for: request),
@@ -126,7 +128,7 @@ extension MLNNetworkManager: MLNNetworkManageable {
         with headers: [HTTPHeader] = [],
         using body: Data? = nil
     ) async throws(MLNNetworkError) -> Object {
-        let data = try await request(method, for: url, with: headers, using: body)
+        let data = try await request(method, timeout: timeout, for: url, with: headers, using: body)
 
         guard let object = try? decoder.decode(Object.self, from: data) else {
             throw .decodingFormatMismatch
