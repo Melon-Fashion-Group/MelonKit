@@ -112,4 +112,11 @@ extension MLNNetworkManager.HTTPHeader {
     public static func userAgent(_ value: String) -> Self {
         .init(name: "User-Agent", value: value)
     }
+
+    ///
+    ///
+    ///
+    public static func custom(name: String, value: String) -> Self {
+        .init(name: name, value: value)
+    }
 }
