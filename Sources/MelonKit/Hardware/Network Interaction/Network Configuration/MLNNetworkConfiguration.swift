@@ -127,6 +127,6 @@ open class MLNNetworkConfiguration: MLNNetworkConfigurable {
         let anchor = anchor.isEmpty ? .empty : "/\(anchor)"
         let endpoint = endpoint.rawValue.isEmpty ? .empty : "/\(endpoint.rawValue)"
 
-        return "\(path)\(anchor)\(endpoint)/"
+        return "\(path)\(anchor)\(endpoint)"
     }
 }
