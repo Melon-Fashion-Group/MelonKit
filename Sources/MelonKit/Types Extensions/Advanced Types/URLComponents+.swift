@@ -23,7 +23,7 @@ extension URLComponents {
     ///
     ///
     @available(iOS 16.0, *)
-    public func addQueryItems(_ items: [URLQueryItem]) -> Self {
+    public func addQueryItems(_ items: [URLQueryItem]?) -> Self {
         var components = self
 
         components.queryItems = items

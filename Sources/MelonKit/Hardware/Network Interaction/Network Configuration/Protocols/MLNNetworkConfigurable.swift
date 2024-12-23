@@ -71,5 +71,5 @@ public protocol MLNNetworkConfigurable: AnyObject {
     ///
     ///
     ///
-    func getURL(for endpoint: MLNNetworkConfiguration.Endpoint, with items: [URLQueryItem]) -> URL?
+    func getURL(for endpoint: MLNNetworkConfiguration.Endpoint, with items: [URLQueryItem]?) -> URL?
 }
