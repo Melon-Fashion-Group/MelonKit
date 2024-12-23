@@ -28,6 +28,7 @@ import Foundation
     ///
     func request(
         _ method: MLNNetworkManager.HTTPMethod,
+        timeout: TimeInterval,
         for url: URL,
         with headers: [MLNNetworkManager.HTTPHeader],
         using body: Data?
@@ -38,6 +39,7 @@ import Foundation
     ///
     func request<Object: Decodable>(
         _ method: MLNNetworkManager.HTTPMethod,
+        timeout: TimeInterval,
         for url: URL,
         with headers: [MLNNetworkManager.HTTPHeader],
         using body: Data?

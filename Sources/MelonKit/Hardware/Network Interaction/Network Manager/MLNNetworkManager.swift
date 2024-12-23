@@ -87,6 +87,7 @@ extension MLNNetworkManager: MLNNetworkManageable {
     ///
     public func request(
         _ method: HTTPMethod = .get,
+        timeout: TimeInterval = 30,
         for url: URL,
         with headers: [HTTPHeader] = [],
         using body: Data? = nil
@@ -120,6 +121,7 @@ extension MLNNetworkManager: MLNNetworkManageable {
     ///
     public func request<Object: Decodable>(
         _ method: HTTPMethod = .get,
+        timeout: TimeInterval = 30,
         for url: URL,
         with headers: [HTTPHeader] = [],
         using body: Data? = nil
