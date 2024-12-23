@@ -74,8 +74,8 @@ extension MLNNetworkManager.HTTPHeader {
     ///
     ///
     ///
-    public static func authorization(bearerToken: String) -> Self {
-        authorization("Bearer \(bearerToken)")
+    public static func authorization(bearer token: String) -> Self {
+        authorization("Bearer \(token)")
     }
 
     ///
