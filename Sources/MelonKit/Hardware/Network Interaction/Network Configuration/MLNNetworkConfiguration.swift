@@ -76,23 +76,7 @@ open class MLNNetworkConfiguration: MLNNetworkConfigurable {
     ///
     ///
     ///
-    public func getURL(for endpoint: Endpoint) -> URL? {
-        let components = createURLComponents(with: endpoint)
-
-        return components.url
-    }
-
-    ///
-    ///
-    ///
-    public func getURL(for endpoint: Endpoint, with items: URLQueryItem...) -> URL? {
-        getURL(for: endpoint, with: items)
-    }
-
-    ///
-    ///
-    ///
-    public func getURL(for endpoint: Endpoint, with items: [URLQueryItem]) -> URL? {
+    public func getURL(for endpoint: Endpoint, with items: [URLQueryItem] = []) -> URL? {
         let components = createURLComponents(with: endpoint)
         let componentsWithQueryItems = components.addQueryItems(items)
 
