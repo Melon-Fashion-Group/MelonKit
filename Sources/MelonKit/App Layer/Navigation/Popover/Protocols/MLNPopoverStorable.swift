@@ -26,11 +26,6 @@ import SwiftUI
     ///
     ///
     ///
-    var presentationType: MLNPopoverView.PresentationType { get }
-
-    ///
-    ///
-    ///
     var popover: MLNPopoverView { get }
 
     ///

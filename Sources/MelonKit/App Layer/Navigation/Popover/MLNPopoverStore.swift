@@ -26,11 +26,6 @@ public final class MLNPopoverStore: MLNPopoverStorable {
     ///
     ///
     ///
-    public let presentationType: MLNPopoverView.PresentationType = .sheet
-
-    ///
-    ///
-    ///
     public private(set) var popover: MLNPopoverView = .empty
 
     ///
