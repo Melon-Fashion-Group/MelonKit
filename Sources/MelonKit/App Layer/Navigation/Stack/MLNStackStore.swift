@@ -30,6 +30,15 @@ public final class MLNStackStore: MLNStackStorable {
 
 
 
+    // MARK: - Init
+
+    ///
+    ///
+    ///
+    public init() { }
+
+
+
     // MARK: - Public methods
 
     ///

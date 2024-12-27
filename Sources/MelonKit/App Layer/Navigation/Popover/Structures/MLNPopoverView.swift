@@ -1,5 +1,5 @@
 //
-//  MLNRootStore.swift
+//  MLNPopoverView.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -13,20 +13,25 @@ import SwiftUI
 
 
 
-// MARK: - MLNRootStore
+// MARK: - MLNPopoverView
 
 ///
 ///
 ///
 @available(iOS 16.0, *)
-public final class MLNRootStore: MLNRootStorable {
+public struct MLNPopoverView {
 
     // MARK: - Public properties
 
     ///
     ///
     ///
-    public private(set) var view = AnyView(EmptyView())
+    public let type: PresentationType
+
+    ///
+    ///
+    ///
+    public let view: AnyView
 
 
 
@@ -35,16 +40,8 @@ public final class MLNRootStore: MLNRootStorable {
     ///
     ///
     ///
-    public init() { }
-
-
-
-    // MARK: - Public methods
-
-    ///
-    ///
-    ///
-    public func setView(_ view: some View) {
+    public init(_ view: some View, as type: PresentationType = .sheet) {
         self.view = .init(view)
+        self.type = type
     }
 }
