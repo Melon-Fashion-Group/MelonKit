@@ -31,6 +31,16 @@ extension Color: ColorConvertible {
         self = color
     }
 
+    ///
+    ///
+    ///
+    @available(iOS 16.0, *)
+    public init?(hex hexString: String?) {
+        guard let hexString else { return nil }
+
+        self.init(hex: hexString)
+    }
+
 
 
     // MARK: - Public methods
