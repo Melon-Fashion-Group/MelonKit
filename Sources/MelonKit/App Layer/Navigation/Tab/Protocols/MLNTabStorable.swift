@@ -35,10 +35,10 @@ import Foundation
     ///
     ///
     ///
-    func insertTab(_ tab: MLNTab, at index: Int)
+    func insert(_ tab: MLNTab, at index: Int)
 
     ///
     ///
     ///
-    func removeTab(at index: Int)
+    func remove(at index: Int)
 }

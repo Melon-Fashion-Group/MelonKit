@@ -44,7 +44,7 @@ public final class MLNRootStore: MLNRootStorable {
     ///
     ///
     ///
-    public func setView(_ view: some View) {
+    public func set(_ view: some View) {
         self.view = .init(view)
     }
 }

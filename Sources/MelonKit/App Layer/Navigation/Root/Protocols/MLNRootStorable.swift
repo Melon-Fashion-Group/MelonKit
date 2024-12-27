@@ -35,5 +35,5 @@ import SwiftUI
     ///
     ///
     ///
-    func setView(_ view: some View)
+    func set(_ view: some View)
 }
