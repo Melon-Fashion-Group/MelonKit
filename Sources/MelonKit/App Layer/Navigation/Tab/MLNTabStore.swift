@@ -55,7 +55,21 @@ public final class MLNTabStore: MLNTabStorable {
     ///
     ///
     ///
+    public func removeLast() {
+        tabs.removeLast()
+    }
+
+    ///
+    ///
+    ///
     public func remove(at index: Int) {
         tabs.remove(at: index)
+    }
+
+    ///
+    ///
+    ///
+    public func removeAll() {
+        tabs.removeAll()
     }
 }

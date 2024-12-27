@@ -45,5 +45,15 @@ import Foundation
     ///
     ///
     ///
+    func removeLast()
+
+    ///
+    ///
+    ///
     func remove(at index: Int)
+
+    ///
+    ///
+    ///
+    func removeAll()
 }
