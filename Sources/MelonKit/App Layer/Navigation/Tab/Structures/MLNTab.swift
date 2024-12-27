@@ -31,7 +31,7 @@ public struct MLNTab {
     ///
     ///
     ///
-    public let title: String?
+    public let title: LocalizedStringKey?
 
     ///
     ///
@@ -52,7 +52,7 @@ public struct MLNTab {
     ///
     public init(
         icon: Image,
-        title: String? = nil,
+        title: LocalizedStringKey? = nil,
         badge: String? = nil,
         view: some View
     ) {
