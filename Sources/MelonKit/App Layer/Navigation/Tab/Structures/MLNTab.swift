@@ -20,10 +20,28 @@ import SwiftUI
 ///
 @available(iOS 16.0, *)
 public struct MLNTab {
-    let icon: Image
-    let title: String?
-    let badge: String?
-    let content: AnyView
+
+    // MARK: - Public properties
+
+    ///
+    ///
+    ///
+    public let icon: Image
+
+    ///
+    ///
+    ///
+    public let title: String?
+
+    ///
+    ///
+    ///
+    public let badge: String?
+
+    ///
+    ///
+    ///
+    public let content: AnyView
 
 
 

@@ -1,5 +1,5 @@
 //
-//  MLNTabStorable.swift
+//  MLNStackStorable.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -13,20 +13,20 @@ import Foundation
 
 
 
-// MARK: - MLNTabStorable
+// MARK: - MLNStackStorable
 
 ///
 ///
 ///
 @available(iOS 16.0, *)
-public protocol MLNTabStorable: ObservableObject {
+@MainActor public protocol MLNStackStorable: ObservableObject {
 
     // MARK: - Public properties
 
     ///
     ///
     ///
-    var tabs: [MLNTab] { get }
+    var views: [MLNStackView] { get }
 
 
 
@@ -35,10 +35,15 @@ public protocol MLNTabStorable: ObservableObject {
     ///
     ///
     ///
-    func insertTab(_ tab: MLNTab, at index: Int)
+    func push(_ view: MLNStackView, animated: Bool)
 
     ///
     ///
     ///
-    func removeTab(at index: Int)
+    func pop(animated: Bool)
+
+    ///
+    ///
+    ///
+    func pop(to id: AnyHashable, animated: Bool)
 }
