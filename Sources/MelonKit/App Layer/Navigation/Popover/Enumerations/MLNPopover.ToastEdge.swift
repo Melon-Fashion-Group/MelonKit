@@ -14,7 +14,7 @@ import SwiftUI
 
 // MARK: - MLNPopover.ToastEdge
 
-extension MLNPopoverView {
+extension MLNPopover {
 
     ///
     ///

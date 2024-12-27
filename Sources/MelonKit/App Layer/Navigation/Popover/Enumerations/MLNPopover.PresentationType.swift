@@ -14,7 +14,7 @@ import SwiftUI
 
 // MARK: - MLNPopover.PresentationType
 
-extension MLNPopoverView {
+extension MLNPopover {
 
     ///
     ///

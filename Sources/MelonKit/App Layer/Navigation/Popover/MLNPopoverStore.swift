@@ -26,7 +26,7 @@ public final class MLNPopoverStore: MLNPopoverStorable {
     ///
     ///
     ///
-    public private(set) var popover: MLNPopoverView = .empty
+    public private(set) var popover: MLNPopover = .empty
 
     ///
     ///
@@ -62,7 +62,7 @@ public final class MLNPopoverStore: MLNPopoverStorable {
     ///
     ///
     ///
-    public func show(_ popover: MLNPopoverView) {
+    public func show(_ popover: MLNPopover) {
         self.popover = popover
 
         _isPresented = true

@@ -1,5 +1,5 @@
 //
-//  MLNPopoverView+.swift
+//  MLNPopover+.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -13,9 +13,9 @@ import SwiftUI
 
 
 
-// MARK: - MLNPopoverView+
+// MARK: - MLNPopover+
 
-extension MLNPopoverView {
+extension MLNPopover {
 
     // MARK: - Public properties
 

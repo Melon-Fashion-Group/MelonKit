@@ -26,7 +26,7 @@ import SwiftUI
     ///
     ///
     ///
-    var popover: MLNPopoverView { get }
+    var popover: MLNPopover { get }
 
     ///
     ///
@@ -40,7 +40,7 @@ import SwiftUI
     ///
     ///
     ///
-    func show(_ popover: MLNPopoverView)
+    func show(_ popover: MLNPopover)
 
     ///
     ///
