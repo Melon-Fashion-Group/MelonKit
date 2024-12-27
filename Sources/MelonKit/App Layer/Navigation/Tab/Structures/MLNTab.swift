@@ -41,7 +41,7 @@ public struct MLNTab {
     ///
     ///
     ///
-    public let content: AnyView
+    public let view: AnyView
 
 
 
@@ -54,11 +54,11 @@ public struct MLNTab {
         icon: Image,
         title: String? = nil,
         badge: String? = nil,
-        content: AnyView
+        view: some View
     ) {
         self.icon = icon
         self.title = title
         self.badge = badge
-        self.content = content
+        self.view = .init(view)
     }
 }
