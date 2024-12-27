@@ -35,6 +35,11 @@ import Foundation
     ///
     ///
     ///
+    func append(_ tab: MLNTab)
+
+    ///
+    ///
+    ///
     func insert(_ tab: MLNTab, at index: Int)
 
     ///

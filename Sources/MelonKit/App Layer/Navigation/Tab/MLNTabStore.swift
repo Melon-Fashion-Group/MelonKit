@@ -41,6 +41,13 @@ public final class MLNTabStore: MLNTabStorable {
     ///
     ///
     ///
+    public func append(_ tab: MLNTab) {
+        tabs.append(tab)
+    }
+
+    ///
+    ///
+    ///
     public func insert(_ tab: MLNTab, at index: Int) {
         tabs.insert(tab, at: index)
     }
