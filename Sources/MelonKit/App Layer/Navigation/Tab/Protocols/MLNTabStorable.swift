@@ -40,17 +40,7 @@ import Foundation
     ///
     ///
     ///
-    func insert(_ tab: MLNTab, at index: Int)
-
-    ///
-    ///
-    ///
-    func removeLast()
-
-    ///
-    ///
-    ///
-    func remove(at index: Int)
+    func remove()
 
     ///
     ///

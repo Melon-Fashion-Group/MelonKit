@@ -23,7 +23,7 @@ public final class MLNTabStore: MLNTabStorable {
 
     // MARK: - Public properties
 
-    public private(set) var tabs: [MLNTab] = []
+    @Published public private(set) var tabs: [MLNTab] = []
 
 
 
@@ -48,22 +48,10 @@ public final class MLNTabStore: MLNTabStorable {
     ///
     ///
     ///
-    public func insert(_ tab: MLNTab, at index: Int) {
-        tabs.insert(tab, at: index)
-    }
-
-    ///
-    ///
-    ///
-    public func removeLast() {
-        tabs.removeLast()
-    }
-
-    ///
-    ///
-    ///
-    public func remove(at index: Int) {
-        tabs.remove(at: index)
+    public func remove() {
+        if tabs.count > 1 {
+            tabs.removeLast()
+        }
     }
 
     ///
