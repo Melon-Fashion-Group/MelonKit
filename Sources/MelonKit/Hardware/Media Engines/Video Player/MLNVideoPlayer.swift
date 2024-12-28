@@ -44,7 +44,10 @@ public final class MLNVideoPlayer: VideoPlayable {
     ///
     public let urlRequest: URLRequest
 
-    let queue = AVQueuePlayer()
+    ///
+    ///
+    ///
+    public let queue = AVQueuePlayer()
 
 
 
