@@ -39,7 +39,11 @@ public final class MLNVideoPlayer: VideoPlayable {
         set { queue.volume = newValue }
     }
 
-    let urlRequest: URLRequest
+    ///
+    ///
+    ///
+    public let urlRequest: URLRequest
+
     let queue = AVQueuePlayer()
 
 
@@ -92,7 +96,10 @@ public final class MLNVideoPlayer: VideoPlayable {
         looper?.disableLooping()
     }
 
-    func setupPlayer(with fileURL: URL) {
+    ///
+    ///
+    ///
+    public func setupPlayer(with fileURL: URL) {
         let asset = AVURLAsset(url: fileURL)
         let item = AVPlayerItem(asset: asset)
 
