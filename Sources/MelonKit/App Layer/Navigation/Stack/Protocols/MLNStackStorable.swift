@@ -46,4 +46,9 @@ import Foundation
     ///
     ///
     func pop(to id: AnyHashable, animated: Bool)
+
+    ///
+    ///
+    ///
+    func popToRoot(animated: Bool)
 }

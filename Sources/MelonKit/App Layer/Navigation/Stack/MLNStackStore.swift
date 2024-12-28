@@ -58,9 +58,9 @@ public final class MLNStackStore: MLNStackStorable {
         UIView.setAnimationsEnabled(animated)
         defer { UIView.setAnimationsEnabled(true) }
 
-        if views.count > 1 {
-            views.removeLast()
-        }
+        guard views.count > 1 else { return }
+
+        views.removeLast()
     }
 
     ///
@@ -70,6 +70,15 @@ public final class MLNStackStore: MLNStackStorable {
         guard views.contains(where: { $0.id == id }) else { return }
 
         while views.last?.id != id {
+            pop(animated: animated)
+        }
+    }
+
+    ///
+    ///
+    ///
+    public func popToRoot(animated: Bool = true) {
+        while views.count > 1 {
             pop(animated: animated)
         }
     }
