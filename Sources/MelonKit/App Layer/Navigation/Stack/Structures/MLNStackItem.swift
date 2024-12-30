@@ -1,5 +1,5 @@
 //
-//  MLNStackView.swift
+//  MLNStackItem.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -13,13 +13,13 @@ import SwiftUI
 
 
 
-// MARK: - MLNStackView
+// MARK: - MLNStackItem
 
 ///
 ///
 ///
 @available(iOS 16.0, *)
-public struct MLNStackView: Identifiable, Hashable {
+public struct MLNStackItem: Identifiable {
 
     // MARK: - Public properties
 
@@ -40,7 +40,10 @@ public struct MLNStackView: Identifiable, Hashable {
     ///
     ///
     ///
-    public init(id: AnyHashable? = nil, view: some View) {
+    public init(
+        id: AnyHashable? = nil,
+        view: some View
+    ) {
         self.id = id ?? AnyHashable(UUID())
         self.view = .init(view)
     }

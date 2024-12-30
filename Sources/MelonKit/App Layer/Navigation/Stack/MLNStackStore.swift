@@ -26,7 +26,12 @@ public final class MLNStackStore: MLNStackStorable {
     ///
     ///
     ///
-    @Published public var views: [MLNStackView] = []
+    @Published public var items: [MLNStackItem] = []
+
+    ///
+    ///
+    ///
+    @Published public var rootItem: MLNStackItem?
 
 
 
@@ -44,11 +49,22 @@ public final class MLNStackStore: MLNStackStorable {
     ///
     ///
     ///
-    public func push(_ view: MLNStackView, animated: Bool = true) {
+    public func set(root item: MLNStackItem, animated: Bool = false) {
         UIView.setAnimationsEnabled(animated)
         defer { UIView.setAnimationsEnabled(true) }
 
-        views.append(view)
+        rootItem = item
+        items.removeAll()
+    }
+
+    ///
+    ///
+    ///
+    public func push(_ item: MLNStackItem, animated: Bool = true) {
+        UIView.setAnimationsEnabled(animated)
+        defer { UIView.setAnimationsEnabled(true) }
+
+        items.append(item)
     }
 
     ///
@@ -58,18 +74,16 @@ public final class MLNStackStore: MLNStackStorable {
         UIView.setAnimationsEnabled(animated)
         defer { UIView.setAnimationsEnabled(true) }
 
-        guard views.count > 1 else { return }
-
-        views.removeLast()
+        items.removeLast()
     }
 
     ///
     ///
     ///
     public func pop(to id: AnyHashable, animated: Bool = true) {
-        guard views.contains(where: { $0.id == id }) else { return }
+        guard items.contains(where: { $0.id == id }) else { return }
 
-        while views.last?.id != id {
+        while items.last?.id != id {
             pop(animated: animated)
         }
     }
@@ -78,8 +92,9 @@ public final class MLNStackStore: MLNStackStorable {
     ///
     ///
     public func popToRoot(animated: Bool = true) {
-        while views.count > 1 {
-            pop(animated: animated)
-        }
+        UIView.setAnimationsEnabled(animated)
+        defer { UIView.setAnimationsEnabled(true) }
+
+        items.removeAll()
     }
 }

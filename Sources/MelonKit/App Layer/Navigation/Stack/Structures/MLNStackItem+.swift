@@ -1,5 +1,5 @@
 //
-//  MLNStackView+.swift
+//  MLNStackItem+.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -13,9 +13,9 @@ import SwiftUI
 
 
 
-// MARK: - MLNStackView+
+// MARK: - Hashable+
 
-extension MLNStackView {
+extension MLNStackItem: Hashable {
 
     // MARK: - Public methods
 
@@ -23,9 +23,18 @@ extension MLNStackView {
     ///
     ///
     public func hash(into hasher: inout Hasher) { hasher.combine(id) }
+}
+
+
+
+// MARK: - Equatable+
+
+extension MLNStackItem: Equatable {
+
+    // MARK: - Public methods
 
     ///
     ///
     ///
-    public static func == (_ lhs: MLNStackView, _ rhs: MLNStackView) -> Bool { lhs.id == rhs.id }
+    public static func == (_ lhs: MLNStackItem, _ rhs: MLNStackItem) -> Bool { lhs.id == rhs.id }
 }

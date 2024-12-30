@@ -26,7 +26,7 @@ import Foundation
     ///
     ///
     ///
-    var views: [MLNStackView] { get }
+    var items: [MLNStackItem] { get }
 
 
 
@@ -35,7 +35,12 @@ import Foundation
     ///
     ///
     ///
-    func push(_ view: MLNStackView, animated: Bool)
+    func set(root item: MLNStackItem, animated: Bool)
+
+    ///
+    ///
+    ///
+    func push(_ item: MLNStackItem, animated: Bool)
 
     ///
     ///
