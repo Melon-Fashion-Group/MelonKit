@@ -26,7 +26,7 @@ public final class MLNStackStore: MLNStackStorable {
     ///
     ///
     ///
-    @Published public private(set) var views: [MLNStackView] = []
+    @Published public var views: [MLNStackView] = []
 
 
 
