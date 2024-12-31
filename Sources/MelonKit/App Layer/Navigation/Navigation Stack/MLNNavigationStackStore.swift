@@ -31,7 +31,7 @@ public final class MLNNavigationStackStore: MLNNavigationStackStorable {
     ///
     ///
     ///
-    @Published public var rootItem: MLNNavigationStackItem?
+    public var rootItem: MLNNavigationStackItem?
 
 
 
