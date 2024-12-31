@@ -1,5 +1,5 @@
 //
-//  MLNStackStore.swift
+//  MLNNavigationStackStore.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -13,25 +13,25 @@ import SwiftUI
 
 
 
-// MARK: - MLNStackStore
+// MARK: - MLNNavigationStackStore
 
 ///
 ///
 ///
 @available(iOS 16.0, *)
-public final class MLNStackStore: MLNStackStorable {
+public final class MLNNavigationStackStore: MLNNavigationStackStorable {
 
     // MARK: - Public properties
 
     ///
     ///
     ///
-    @Published public var items: [MLNStackItem] = []
+    @Published public var items: [MLNNavigationStackItem] = []
 
     ///
     ///
     ///
-    @Published public var rootItem: MLNStackItem?
+    @Published public var rootItem: MLNNavigationStackItem?
 
 
 
@@ -49,7 +49,7 @@ public final class MLNStackStore: MLNStackStorable {
     ///
     ///
     ///
-    public func set(root item: MLNStackItem, animated: Bool = false) {
+    public func set(root item: MLNNavigationStackItem, animated: Bool = false) {
         UIView.setAnimationsEnabled(animated)
         defer { UIView.setAnimationsEnabled(true) }
 
@@ -60,7 +60,7 @@ public final class MLNStackStore: MLNStackStorable {
     ///
     ///
     ///
-    public func push(_ item: MLNStackItem, animated: Bool = true) {
+    public func push(_ item: MLNNavigationStackItem, animated: Bool = true) {
         UIView.setAnimationsEnabled(animated)
         defer { UIView.setAnimationsEnabled(true) }
 

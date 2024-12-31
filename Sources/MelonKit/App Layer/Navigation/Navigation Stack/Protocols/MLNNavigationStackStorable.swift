@@ -1,5 +1,5 @@
 //
-//  MLNStackStorable.swift
+//  MLNNavigationStackStorable.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -9,24 +9,29 @@
 
 // MARK: Import section
 
-import Foundation
+import SwiftUI
 
 
 
-// MARK: - MLNStackStorable
+// MARK: - MLNNavigationStackStorable
 
 ///
 ///
 ///
 @available(iOS 16.0, *)
-@MainActor public protocol MLNStackStorable: ObservableObject {
+@MainActor public protocol MLNNavigationStackStorable: ObservableObject {
 
     // MARK: - Public properties
 
     ///
     ///
     ///
-    var items: [MLNStackItem] { get }
+    var items: [MLNNavigationStackItem] { get set }
+
+    ///
+    ///
+    ///
+    var rootItem: MLNNavigationStackItem? { get set }
 
 
 
@@ -35,12 +40,12 @@ import Foundation
     ///
     ///
     ///
-    func set(root item: MLNStackItem, animated: Bool)
+    func set(root item: MLNNavigationStackItem, animated: Bool)
 
     ///
     ///
     ///
-    func push(_ item: MLNStackItem, animated: Bool)
+    func push(_ item: MLNNavigationStackItem, animated: Bool)
 
     ///
     ///

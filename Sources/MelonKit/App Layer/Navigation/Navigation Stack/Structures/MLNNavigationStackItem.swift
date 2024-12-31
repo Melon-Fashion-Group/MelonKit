@@ -1,5 +1,5 @@
 //
-//  MLNStackItem.swift
+//  MLNNavigationStackItem.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 27.12.2024.
@@ -13,13 +13,13 @@ import SwiftUI
 
 
 
-// MARK: - MLNStackItem
+// MARK: - MLNNavigationStackItem
 
 ///
 ///
 ///
 @available(iOS 16.0, *)
-public struct MLNStackItem: Identifiable {
+public struct MLNNavigationStackItem: Identifiable {
 
     // MARK: - Public properties
 
