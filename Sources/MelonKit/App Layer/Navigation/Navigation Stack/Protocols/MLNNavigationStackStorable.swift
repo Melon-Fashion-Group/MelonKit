@@ -31,7 +31,7 @@ import SwiftUI
     ///
     ///
     ///
-    var rootItem: MLNNavigationStackItem? { get set }
+    var rootItem: MLNNavigationStackItem? { get }
 
 
 

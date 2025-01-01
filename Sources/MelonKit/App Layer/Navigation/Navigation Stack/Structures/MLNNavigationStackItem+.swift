@@ -13,7 +13,7 @@ import SwiftUI
 
 
 
-// MARK: - Hashable+
+// MARK: - Hashable
 
 extension MLNNavigationStackItem: Hashable {
 
@@ -27,7 +27,7 @@ extension MLNNavigationStackItem: Hashable {
 
 
 
-// MARK: - Equatable+
+// MARK: - Equatable
 
 extension MLNNavigationStackItem: Equatable {
 

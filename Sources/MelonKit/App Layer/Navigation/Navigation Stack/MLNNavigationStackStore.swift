@@ -31,7 +31,7 @@ public final class MLNNavigationStackStore: MLNNavigationStackStorable {
     ///
     ///
     ///
-    public var rootItem: MLNNavigationStackItem?
+    public private(set) var rootItem: MLNNavigationStackItem?
 
 
 
