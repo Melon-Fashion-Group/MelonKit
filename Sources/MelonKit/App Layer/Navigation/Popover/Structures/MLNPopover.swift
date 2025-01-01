@@ -26,12 +26,12 @@ public struct MLNPopover {
     ///
     ///
     ///
-    public let type: PresentationType
+    public let view: AnyView
 
     ///
     ///
     ///
-    public let view: AnyView
+    public let type: PresentationType
 
 
 
@@ -40,7 +40,10 @@ public struct MLNPopover {
     ///
     ///
     ///
-    public init(_ view: some View, as type: PresentationType = .sheet) {
+    public init(
+        _ view: some View,
+        as type: PresentationType = .sheet
+    ) {
         self.view = .init(view)
         self.type = type
     }

@@ -28,19 +28,14 @@ import SwiftUI
     ///
     var popover: MLNPopover { get }
 
+    ///
+    ///
+    ///
+    var isPresented: Bool { get set }
+
 
 
     // MARK: - Public methods
-
-    ///
-    ///
-    ///
-    func get() -> Bool
-
-    ///
-    ///
-    ///
-    func set(_ value: Bool)
 
     ///
     ///

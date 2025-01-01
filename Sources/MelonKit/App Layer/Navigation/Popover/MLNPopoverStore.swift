@@ -28,11 +28,10 @@ public final class MLNPopoverStore: MLNPopoverStorable {
     ///
     public private(set) var popover: MLNPopover = .empty
 
-
-
-    // MARK: - Private properties
-
-    @Published private var isPresented = false
+    ///
+    ///
+    ///
+    @Published public var isPresented = false
 
 
 
@@ -46,18 +45,6 @@ public final class MLNPopoverStore: MLNPopoverStorable {
 
 
     // MARK: - Public methods
-
-    ///
-    ///
-    ///
-    public func get() -> Bool { isPresented }
-
-    ///
-    ///
-    ///
-    public func set(_ value: Bool) {
-        isPresented = value
-    }
 
     ///
     ///

@@ -16,8 +16,5 @@ import SwiftUI
 // MARK: - MLNPopover+
 
 extension MLNPopover {
-
-    // MARK: - Public properties
-
     static var empty: Self { .init(EmptyView(), as: .sheet) }
 }
