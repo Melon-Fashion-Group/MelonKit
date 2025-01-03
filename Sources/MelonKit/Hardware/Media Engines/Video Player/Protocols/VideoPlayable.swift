@@ -15,7 +15,7 @@ import AVKit
 
 // MARK: - VideoPlayable
 
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 protocol VideoPlayable: AnyObject {
 
     // MARK: - Public properties

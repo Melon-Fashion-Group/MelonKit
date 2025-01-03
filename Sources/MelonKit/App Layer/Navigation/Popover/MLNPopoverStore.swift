@@ -9,6 +9,7 @@
 
 // MARK: Import section
 
+import Observation
 import SwiftUI
 
 
@@ -18,20 +19,20 @@ import SwiftUI
 ///
 ///
 ///
-@available(iOS 16.0, *)
-public final class MLNPopoverStore: MLNPopoverStorable {
+@available(iOS 17.0, *)
+@Observable public final class MLNPopoverStore: MLNPopoverStorable {
 
     // MARK: - Public properties
 
     ///
     ///
     ///
-    public private(set) var popover: MLNPopover = .empty
+    @ObservationIgnored public private(set) var popover: MLNPopover = .empty
 
     ///
     ///
     ///
-    @Published public var isPresented = false
+    public var isPresented = false
 
 
 

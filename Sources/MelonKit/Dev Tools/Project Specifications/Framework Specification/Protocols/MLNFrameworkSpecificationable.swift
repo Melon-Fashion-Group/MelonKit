@@ -18,7 +18,7 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public protocol MLNFrameworkSpecificationable: AnyObject {
 
     // MARK: - Public properties

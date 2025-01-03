@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNContainer.ServiceLifetime
 
+@available(iOS 17.0, *)
 extension MLNContainer {
 
     ///

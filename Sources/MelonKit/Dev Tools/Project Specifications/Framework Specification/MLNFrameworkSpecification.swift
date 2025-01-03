@@ -18,7 +18,7 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public final class MLNFramework: MLNFrameworkSpecificationable {
 
     // MARK: - Public properties

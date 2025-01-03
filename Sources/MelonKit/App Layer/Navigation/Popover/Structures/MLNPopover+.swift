@@ -15,6 +15,7 @@ import SwiftUI
 
 // MARK: - MLNPopover+
 
+@available(iOS 17.0, *)
 extension MLNPopover {
     static var empty: Self { .init(EmptyView(), as: .sheet) }
 }

@@ -18,7 +18,7 @@ import UIKit
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 @MainActor public final class MLNHapticFeedback: MLNHapticFeedbackGeneratable {
 
     // MARK: - Private properties

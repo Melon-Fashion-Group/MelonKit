@@ -15,6 +15,7 @@ import SwiftUI
 
 // MARK: - Hashable
 
+@available(iOS 17.0, *)
 extension MLNNavigationStackItem: Hashable {
 
     // MARK: - Public methods
@@ -29,6 +30,7 @@ extension MLNNavigationStackItem: Hashable {
 
 // MARK: - Equatable
 
+@available(iOS 17.0, *)
 extension MLNNavigationStackItem: Equatable {
 
     // MARK: - Public methods

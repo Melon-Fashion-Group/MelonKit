@@ -22,6 +22,6 @@ extension String {
     ///
     ///
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public static let empty: Self = .init()
 }

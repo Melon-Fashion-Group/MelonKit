@@ -18,7 +18,7 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public final class MLNKeychainStorage {
 
     // MARK: - Private properties
@@ -148,6 +148,7 @@ public final class MLNKeychainStorage {
 
 // MARK: - MLNKeychainLoadable
 
+@available(iOS 17.0, *)
 extension MLNKeychainStorage: MLNKeychainLoadable {
 
     // MARK: - Public methods
@@ -175,6 +176,7 @@ extension MLNKeychainStorage: MLNKeychainLoadable {
 
 // MARK: - MLNKeychainRemovable
 
+@available(iOS 17.0, *)
 extension MLNKeychainStorage: MLNKeychainRemovable {
 
     // MARK: - Public methods
@@ -221,6 +223,7 @@ extension MLNKeychainStorage: MLNKeychainRemovable {
 
 // MARK: - MLNKeychainReplaceable
 
+@available(iOS 17.0, *)
 extension MLNKeychainStorage: MLNKeychainReplaceable {
 
     // MARK: - Public methods
@@ -242,6 +245,7 @@ extension MLNKeychainStorage: MLNKeychainReplaceable {
 
 // MARK: - MLNKeychainSaveable
 
+@available(iOS 17.0, *)
 extension MLNKeychainStorage: MLNKeychainSaveable {
 
     // MARK: - Public methods

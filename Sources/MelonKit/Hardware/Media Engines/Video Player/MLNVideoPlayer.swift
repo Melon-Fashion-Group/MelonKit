@@ -18,7 +18,7 @@ import AVKit
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public final class MLNVideoPlayer: VideoPlayable {
 
     // MARK: - Public properties

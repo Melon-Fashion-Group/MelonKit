@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNNetworkError.HTTPStatusCode
 
+@available(iOS 17.0, *)
 extension MLNNetworkError {
 
     ///

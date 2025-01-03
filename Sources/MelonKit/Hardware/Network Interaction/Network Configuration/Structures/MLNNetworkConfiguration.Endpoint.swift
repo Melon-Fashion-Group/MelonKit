@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNNetworkConfiguration.Endpoint
 
+@available(iOS 17.0, *)
 extension MLNNetworkConfiguration {
 
     ///

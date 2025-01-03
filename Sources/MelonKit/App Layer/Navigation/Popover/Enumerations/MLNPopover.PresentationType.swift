@@ -14,6 +14,7 @@ import SwiftUI
 
 // MARK: - MLNPopover.PresentationType
 
+@available(iOS 17.0, *)
 extension MLNPopover {
 
     ///

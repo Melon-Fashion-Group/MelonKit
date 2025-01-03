@@ -14,6 +14,7 @@ import SwiftUI
 
 // MARK: - MLNPopover.ToastEdge
 
+@available(iOS 17.0, *)
 extension MLNPopover {
 
     ///

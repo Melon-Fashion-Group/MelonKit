@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNApp.Build
 
+@available(iOS 17.0, *)
 extension MLNApp {
 
     ///

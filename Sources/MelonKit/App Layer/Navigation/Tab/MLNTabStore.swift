@@ -9,7 +9,7 @@
 
 // MARK: Import section
 
-import Foundation
+import Observation
 
 
 
@@ -18,12 +18,12 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
-public final class MLNTabStore: MLNTabStorable {
+@available(iOS 17.0, *)
+@Observable public final class MLNTabStore: MLNTabStorable {
 
     // MARK: - Public properties
 
-    @Published public private(set) var tabs: [MLNTab] = []
+    public private(set) var tabs: [MLNTab] = []
 
 
 

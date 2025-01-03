@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - CloudSaving
 
+@available(iOS 17.0, *)
 extension MLNKeychainStorage {
 
     ///

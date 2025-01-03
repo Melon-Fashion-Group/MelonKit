@@ -9,7 +9,7 @@
 
 // MARK: Import section
 
-import Foundation
+import Observation
 
 
 
@@ -18,8 +18,8 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
-@MainActor public protocol MLNTabStorable: ObservableObject {
+@available(iOS 17.0, *)
+@MainActor public protocol MLNTabStorable: Observable {
 
     // MARK: - Public properties
 

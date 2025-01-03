@@ -18,7 +18,7 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 public final class MLNDefaultStorage {
 
     // MARK: - Private properties
@@ -42,6 +42,7 @@ public final class MLNDefaultStorage {
 
 // MARK: - MLNDefaultLoadable
 
+@available(iOS 17.0, *)
 extension MLNDefaultStorage: MLNDefaultLoadable {
 
     // MARK: - Public methods
@@ -65,6 +66,7 @@ extension MLNDefaultStorage: MLNDefaultLoadable {
 
 // MARK: - MLNDefaultRemovable
 
+@available(iOS 17.0, *)
 extension MLNDefaultStorage: MLNDefaultRemovable {
 
     // MARK: - Public methods
@@ -100,6 +102,7 @@ extension MLNDefaultStorage: MLNDefaultRemovable {
 
 // MARK: - MLNDefaultReplaceable
 
+@available(iOS 17.0, *)
 extension MLNDefaultStorage: MLNDefaultReplaceable {
 
     // MARK: - Public methods
@@ -117,6 +120,7 @@ extension MLNDefaultStorage: MLNDefaultReplaceable {
 
 // MARK: - MLNDefaultSaveable
 
+@available(iOS 17.0, *)
 extension MLNDefaultStorage: MLNDefaultSaveable {
 
     // MARK: - Public methods

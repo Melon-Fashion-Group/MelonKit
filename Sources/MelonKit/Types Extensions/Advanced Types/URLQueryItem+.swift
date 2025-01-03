@@ -22,7 +22,7 @@ extension URLQueryItem {
     ///
     ///
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public static func item(name: String, value: String? = nil) -> Self {
         .init(name: name, value: value)
     }

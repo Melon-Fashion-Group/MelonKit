@@ -18,7 +18,7 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 @MainActor public final class MLNNetworkManager {
 
     // MARK: - Private properties
@@ -80,6 +80,7 @@ import Foundation
 
 // MARK: - MLNNetworkManageable
 
+@available(iOS 17.0, *)
 extension MLNNetworkManager: MLNNetworkManageable {
 
     // MARK: - Public methods

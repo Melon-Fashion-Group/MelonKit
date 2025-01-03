@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - CustomStringConvertible
 
+@available(iOS 17.0, *)
 extension MLNFramework: CustomStringConvertible {
 
     ///

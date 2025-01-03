@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNVideoPlayer.VideoScaling
 
+@available(iOS 17.0, *)
 extension MLNVideoPlayer {
 
     ///

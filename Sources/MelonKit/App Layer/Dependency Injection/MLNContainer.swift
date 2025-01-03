@@ -18,7 +18,7 @@ import Foundation
 ///
 ///
 ///
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 @MainActor public final class MLNContainer {
 
     // MARK: - Private properties
@@ -40,6 +40,7 @@ import Foundation
 
 // MARK: - MLNRegistrableContainer
 
+@available(iOS 17.0, *)
 extension MLNContainer: MLNRegistrableContainer {
 
     // MARK: - Public methods
@@ -87,6 +88,7 @@ extension MLNContainer: MLNRegistrableContainer {
 
 // MARK: - MLNResolvableContainer
 
+@available(iOS 17.0, *)
 extension MLNContainer: MLNResolvableContainer {
 
     // MARK: - Public methods

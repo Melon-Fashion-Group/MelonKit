@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNNetworkManager.HTTPHeader
 
+@available(iOS 17.0, *)
 extension MLNNetworkManager {
 
     ///
@@ -29,6 +30,11 @@ extension MLNNetworkManager {
     }
 }
 
+
+
+// MARK: - MLNNetworkManager.HTTPHeader+
+
+@available(iOS 17.0, *)
 extension MLNNetworkManager.HTTPHeader {
 
     // MARK: - Public methods

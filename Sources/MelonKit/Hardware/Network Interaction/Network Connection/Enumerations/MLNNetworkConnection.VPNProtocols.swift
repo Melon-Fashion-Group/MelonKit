@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNNetworkConnection.VPNProtocols
 
+@available(iOS 17.0, *)
 extension MLNNetworkConnection {
     enum VPNProtocols: String, CaseIterable {
         case ipsec

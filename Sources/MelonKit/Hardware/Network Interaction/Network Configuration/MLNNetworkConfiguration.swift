@@ -15,7 +15,7 @@ import Foundation
 
 // MARK: - MLNNetworkConfiguration
 
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 open class MLNNetworkConfiguration: MLNNetworkConfigurable {
 
     // MARK: - Public properties

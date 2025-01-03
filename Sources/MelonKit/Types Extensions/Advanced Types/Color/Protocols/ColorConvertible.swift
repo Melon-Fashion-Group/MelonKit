@@ -15,7 +15,7 @@ import SwiftUI
 
 // MARK: - ColorConvertible
 
-@available(iOS 16.0, *)
+@available(iOS 17.0, *)
 protocol ColorConvertible {
 
     // MARK: - Init

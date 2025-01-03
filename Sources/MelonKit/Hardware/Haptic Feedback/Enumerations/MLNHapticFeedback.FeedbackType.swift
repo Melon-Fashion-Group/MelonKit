@@ -15,6 +15,7 @@ import Foundation
 
 // MARK: - MLNHapticFeedback.FeedbackType
 
+@available(iOS 17.0, *)
 extension MLNHapticFeedback {
 
     ///

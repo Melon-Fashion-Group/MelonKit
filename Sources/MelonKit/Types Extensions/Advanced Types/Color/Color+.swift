@@ -22,7 +22,7 @@ extension Color: ColorConvertible {
     ///
     ///
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public init?(hex hexString: String) {
         guard let color = HexConverter.getColor(from: hexString) else {
             return nil
@@ -34,7 +34,7 @@ extension Color: ColorConvertible {
     ///
     ///
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public init?(hex hexString: String?) {
         guard let hexString else { return nil }
 
@@ -48,7 +48,7 @@ extension Color: ColorConvertible {
     ///
     ///
     ///
-    @available(iOS 16.0, *)
+    @available(iOS 17.0, *)
     public func toHexString(isAlphaChannelNeeded: Bool = false) -> String? {
         HexConverter.getString(from: self, isAlphaChannelNeeded: isAlphaChannelNeeded)
     }
