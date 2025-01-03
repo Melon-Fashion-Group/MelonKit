@@ -9,7 +9,6 @@
 
 // MARK: Import section
 
-import Observation
 import SwiftUI
 
 
@@ -20,7 +19,7 @@ import SwiftUI
 ///
 ///
 @available(iOS 17.0, *)
-@MainActor public protocol MLNNavigationStackStorable: Observable {
+@MainActor public protocol MLNNavigationStackStorable: ObservableObject {
 
     // MARK: - Public properties
 

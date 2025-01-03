@@ -9,7 +9,6 @@
 
 // MARK: Import section
 
-import Observation
 import SwiftUI
 
 
@@ -20,14 +19,14 @@ import SwiftUI
 ///
 ///
 @available(iOS 17.0, *)
-@Observable public final class MLNNavigationStackStore: MLNNavigationStackStorable {
+public final class MLNNavigationStackStore: MLNNavigationStackStorable {
 
     // MARK: - Public properties
 
     ///
     ///
     ///
-    public var items: [MLNNavigationStackItem] = []
+    @Published public var items: [MLNNavigationStackItem] = []
 
     ///
     ///
