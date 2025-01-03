@@ -23,7 +23,7 @@ import Foundation
     _ priority: TaskPriority = .userInitiated,
     delay: TimeInterval = 1,
     completion: @escaping () -> Void
-) async {
+) {
     Task(priority: priority) {
         let nanoseconds = convertSecondsInNanoseconds(delay)
 
