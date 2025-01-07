@@ -28,6 +28,11 @@ import Foundation
     ///
     var tabs: [MLNTab] { get }
 
+    ///
+    ///
+    ///
+    var selectedTab: Int { get set }
+
 
 
     // MARK: - Public methods
@@ -46,4 +51,9 @@ import Foundation
     ///
     ///
     func removeAll()
+
+    ///
+    ///
+    ///
+    func selectTab(with index: Int)
 }

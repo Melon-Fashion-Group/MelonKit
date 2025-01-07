@@ -23,7 +23,15 @@ public final class MLNTabStore: MLNTabStorable {
 
     // MARK: - Public properties
 
+    ///
+    ///
+    ///
     @Published public private(set) var tabs: [MLNTab] = []
+
+    ///
+    ///
+    ///
+    @Published public var selectedTab: Int = .zero
 
 
 
@@ -59,5 +67,12 @@ public final class MLNTabStore: MLNTabStorable {
     ///
     public func removeAll() {
         tabs.removeAll()
+    }
+
+    ///
+    ///
+    ///
+    public func selectTab(with index: Int) {
+        selectedTab = index
     }
 }
