@@ -1,5 +1,5 @@
 //
-//  MLNAlertStore.swift
+//  MLNCoverStore.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 08.01.2025.
@@ -13,13 +13,13 @@ import SwiftUI
 
 
 
-// MARK: - MLNAlertStore
+// MARK: - MLNCoverStore
 
 ///
 ///
 ///
 @available(iOS 17.0, *)
-@Observable public final class MLNAlertStore: MLNPopoverStorable {
+@Observable public final class MLNCoverStore: MLNPopoverStorable {
 
     // MARK: - Public properties
 
@@ -52,9 +52,7 @@ import SwiftUI
     public func show(_ view: some View) {
         self.view = .init(view)
 
-        withAnimation(.bouncy(duration: 0.3)) {
-            isPresented = true
-        }
+        isPresented = true
     }
 
     ///
@@ -63,8 +61,6 @@ import SwiftUI
     public func hide() {
         view = .empty
 
-        withAnimation(.bouncy(duration: 0.3)) {
-            isPresented = false
-        }
+        isPresented = false
     }
 }

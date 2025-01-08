@@ -1,5 +1,5 @@
 //
-//  MLNAlertStorable.swift
+//  MLNPopoverStorable.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 08.01.2025.
@@ -13,13 +13,13 @@ import SwiftUI
 
 
 
-// MARK: - MLNAlertStorable
+// MARK: - MLNPopoverStorable
 
 ///
 ///
 ///
 @available(iOS 17.0, *)
-@MainActor public protocol MLNAlertStorable: Observable {
+@MainActor public protocol MLNPopoverStorable: Observable {
 
     // MARK: - Public properties
 
