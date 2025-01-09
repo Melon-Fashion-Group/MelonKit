@@ -32,4 +32,9 @@ public protocol MLNFrameworkSpecificationable: AnyObject {
     ///
     ///
     var build: MLNFramework.Build { get }
+
+    ///
+    ///
+    ///
+    var description: String { get }
 }
