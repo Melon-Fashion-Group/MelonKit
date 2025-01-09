@@ -109,11 +109,11 @@ extension MLNNetworkManager: MLNNetworkManageable {
         }
 
         guard let statusCode = MLNNetworkError.HTTPStatusCode(rawValue: httpResponse.statusCode) else {
-            throw .unknownStatusCode(.unknown)
+            throw .unsuccessfulStatusCode(.unknown)
         }
 
         guard statusCode.isSuccess else {
-            throw .unknownStatusCode(statusCode)
+            throw .unsuccessfulStatusCode(statusCode)
         }
 
         return data

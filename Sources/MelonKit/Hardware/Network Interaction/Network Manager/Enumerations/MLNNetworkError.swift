@@ -24,6 +24,11 @@ public enum MLNNetworkError: Error {
     ///
     ///
     ///
+    case invalidURL
+
+    ///
+    ///
+    ///
     case vpnEnabled
 
     ///
@@ -34,7 +39,7 @@ public enum MLNNetworkError: Error {
     ///
     ///
     ///
-    case unknownStatusCode(HTTPStatusCode)
+    case unsuccessfulStatusCode(HTTPStatusCode)
 
     ///
     ///
