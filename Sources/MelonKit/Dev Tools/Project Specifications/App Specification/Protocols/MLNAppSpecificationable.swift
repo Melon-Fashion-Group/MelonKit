@@ -32,4 +32,9 @@ public protocol MLNAppSpecificationable: AnyObject {
     ///
     ///
     var build: MLNApp.Build { get }
+
+    ///
+    ///
+    ///
+    var description: String { get }
 }
