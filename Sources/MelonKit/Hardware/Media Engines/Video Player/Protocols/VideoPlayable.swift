@@ -22,6 +22,7 @@ protocol VideoPlayable: AnyObject {
 
     var isMuted: Bool { get set }
     var volume: Float { get set }
+    var backgroundPlaybackPolicy: AVPlayerAudiovisualBackgroundPlaybackPolicy { get set }
     var urlRequest: URLRequest { get }
     var queue: AVQueuePlayer { get }
 

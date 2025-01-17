@@ -42,6 +42,14 @@ public final class MLNVideoPlayer: VideoPlayable {
     ///
     ///
     ///
+    public var backgroundPlaybackPolicy: AVPlayerAudiovisualBackgroundPlaybackPolicy {
+        get { queue.audiovisualBackgroundPlaybackPolicy }
+        set { queue.audiovisualBackgroundPlaybackPolicy = newValue }
+    }
+
+    ///
+    ///
+    ///
     public let urlRequest: URLRequest
 
     ///
