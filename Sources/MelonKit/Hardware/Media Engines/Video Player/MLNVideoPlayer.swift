@@ -50,7 +50,7 @@ public final class MLNVideoPlayer: VideoPlayable {
     ///
     ///
     ///
-    public let urlRequest: URLRequest
+    public let request: URLRequest
 
     ///
     ///
@@ -70,8 +70,8 @@ public final class MLNVideoPlayer: VideoPlayable {
     ///
     ///
     ///
-    public init(request urlRequest: URLRequest) {
-        self.urlRequest = urlRequest
+    public init(request: URLRequest) {
+        self.request = request
     }
 
 
