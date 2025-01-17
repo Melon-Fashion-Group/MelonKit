@@ -21,7 +21,7 @@ extension MLNVideoPlayer {
     ///
     ///
     ///
-    public enum VideoScaling {
+    public enum VideoScaling: Sendable {
 
         ///
         ///
