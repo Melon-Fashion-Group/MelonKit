@@ -26,12 +26,12 @@ public final class MLNFramework: MLNFrameworkSpecificationable {
     ///
     ///
     ///
-    public let version = Version(major: 1, minor: 0, patch: 0)
+    public let version = Version(major: 0, minor: 34, patch: 1)
 
     ///
     ///
     ///
-    public let build: Build = 10
+    public let build: Build = 1
 
 
 
