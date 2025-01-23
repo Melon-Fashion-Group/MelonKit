@@ -52,9 +52,7 @@ import SwiftUI
     public func show(_ view: some View) {
         self.view = .init(view)
 
-        withAnimation(.interactiveSpring(duration: 0.3)) {
-            isPresented = true
-        }
+        isPresented = true
     }
 
     ///
@@ -63,8 +61,6 @@ import SwiftUI
     public func hide() {
         view = .empty
 
-        withAnimation(.interactiveSpring(duration: 0.3)) {
-            isPresented = false
-        }
+        isPresented = false
     }
 }
