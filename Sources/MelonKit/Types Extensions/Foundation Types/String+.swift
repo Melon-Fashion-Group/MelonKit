@@ -23,5 +23,11 @@ extension String {
     ///
     ///
     @available(iOS 17.0, *)
-    public static let empty: Self = .init()
+    public static let empty = Self()
+
+    ///
+    ///
+    ///
+    @available(iOS 17.0, *)
+    public static let whitespace = " "
 }
