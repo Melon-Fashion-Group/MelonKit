@@ -26,7 +26,7 @@ public final class MLNFramework: MLNFrameworkSpecificationable {
     ///
     ///
     ///
-    public let version = Version(major: 0, minor: 41, patch: 0)
+    public let version = Version(major: 1, minor: 0, patch: 0)
 
     ///
     ///
