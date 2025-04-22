@@ -9,7 +9,7 @@
 
 // MARK: Import section
 
-import Foundation
+import UIKit
 
 
 
@@ -30,4 +30,20 @@ extension String {
     ///
     @available(iOS 17.0, *)
     public static let whitespace = " "
+}
+
+
+
+// MARK: - QRCodeCodable
+
+extension String: QRCodeCodable {
+
+    // MARK: - Public methods
+
+    ///
+    ///
+    ///
+    func generateQRCode(as color: UIColor = .black, using scaleFactor: CGFloat = 1) -> UIImage? {
+        QRCodeGenerator.generate(from: self, as: color, using: scaleFactor)
+    }
 }

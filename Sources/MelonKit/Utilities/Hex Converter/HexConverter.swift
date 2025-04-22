@@ -18,12 +18,6 @@ import SwiftUI
 @available(iOS 17.0, *)
 final class HexConverter: HexConvertible {
 
-    // MARK: - Init
-
-    private init() { }
-
-
-
     // MARK: - Public methods
 
     static func getColor(from hexString: String) -> Color? {
@@ -89,6 +83,12 @@ final class HexConverter: HexConvertible {
 
         return .init(format: "#%02X%02X%02X%02X", redComponent, greenComponent, blueComponent, alphaChannel)
     }
+
+
+
+    // MARK: - Init
+
+    private init() { }
 
 
 
