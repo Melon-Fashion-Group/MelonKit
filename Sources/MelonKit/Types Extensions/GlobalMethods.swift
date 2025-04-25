@@ -34,6 +34,6 @@ import Foundation
 }
 
 @available(iOS 17.0, *)
-@MainActor private func convertSecondsInNanoseconds(_ seconds: TimeInterval) -> UInt64 {
+@MainActor public func convertSecondsInNanoseconds(_ seconds: TimeInterval) -> UInt64 {
     .init(seconds * 1_000_000_000)
 }
