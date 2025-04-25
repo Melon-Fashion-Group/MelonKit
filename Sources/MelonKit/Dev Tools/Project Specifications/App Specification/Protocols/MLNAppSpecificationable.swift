@@ -26,6 +26,11 @@ public protocol MLNAppSpecificationable: AnyObject {
     ///
     ///
     ///
+    var name: String { get }
+
+    ///
+    ///
+    ///
     var version: MLNApp.Version { get }
 
     ///
