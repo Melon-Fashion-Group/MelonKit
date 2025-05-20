@@ -1,5 +1,5 @@
 //
-//  MLNTasksQueue.swift
+//  MLNSimultaneousTaskQueue.swift
 //  Melon Fashion SDK
 //
 //  Created by Dimka Novikov on 25.04.2025.
@@ -13,20 +13,20 @@ import Foundation
 
 
 
-// MARK: - MLNTasksQueue
+// MARK: - MLNSimultaneousTaskQueue
 
 ///
 ///
 ///
 @available(iOS 17.0, *)
-public actor MLNTasksQueue {
+public actor MLNSimultaneousTaskQueue {
 
     // MARK: - Private properties
 
-    private var numberOfRunningTasks: Int = .zero
-    private var queue: [CheckedContinuation<Void, Error>] = []
+    private let maxNumberOfSimultaneousTasks: UInt8
+    private var numberOfSimultaneouslyRunningTasks: UInt8 = .zero
 
-    private let numberOfSimultaneousTasks: UInt8
+    private var queue: [CheckedContinuation<Void, Error>] = []
 
 
 
@@ -35,8 +35,8 @@ public actor MLNTasksQueue {
     ///
     ///
     ///
-    public init(tasks numberOfSimultaneousTasks: UInt8) {
-        self.numberOfSimultaneousTasks = numberOfSimultaneousTasks
+    public init(count maxNumberOfSimultaneousTasks: UInt8) {
+        self.maxNumberOfSimultaneousTasks = maxNumberOfSimultaneousTasks
     }
 
 
@@ -44,7 +44,7 @@ public actor MLNTasksQueue {
     // MARK: - Deinit
 
     deinit {
-        queue.forEach { task in task.resume(throwing: CancellationError()) }
+        queue.forEach { $0.resume(throwing: CancellationError()) }
     }
 
 
@@ -62,13 +62,13 @@ public actor MLNTasksQueue {
         try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
             queue.append(continuation)
 
-            tryRunEnqueuedTask()
+            executeEnqueuedTask()
         }
 
         defer {
-            numberOfRunningTasks -= 1
+            numberOfSimultaneouslyRunningTasks -= 1
 
-            tryRunEnqueuedTask()
+            executeEnqueuedTask()
         }
 
         try Task.checkCancellation()
@@ -80,10 +80,10 @@ public actor MLNTasksQueue {
 
     // MARK: - Private functions
 
-    private func tryRunEnqueuedTask() {
-        guard !queue.isEmpty, numberOfRunningTasks < numberOfSimultaneousTasks else { return }
+    private func executeEnqueuedTask() {
+        guard !queue.isEmpty, numberOfSimultaneouslyRunningTasks < maxNumberOfSimultaneousTasks else { return }
 
-        numberOfRunningTasks += 1
+        numberOfSimultaneouslyRunningTasks += 1
 
         let task = queue.removeFirst()
 
