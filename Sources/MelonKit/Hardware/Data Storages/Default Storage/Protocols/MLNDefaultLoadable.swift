@@ -19,7 +19,7 @@ import Foundation
 ///
 ///
 @available(iOS 17.0, *)
-@MainActor public protocol MLNDefaultLoadable: AnyObject {
+public protocol MLNDefaultLoadable: AnyObject {
 
     // MARK: - Public methods
 
