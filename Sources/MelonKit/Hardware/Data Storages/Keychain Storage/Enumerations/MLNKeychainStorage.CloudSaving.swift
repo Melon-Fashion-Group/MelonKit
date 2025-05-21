@@ -21,7 +21,7 @@ extension MLNKeychainStorage {
     ///
     ///
     ///
-    public enum CloudSaving {
+    public enum CloudSaving: Sendable {
 
         ///
         ///
