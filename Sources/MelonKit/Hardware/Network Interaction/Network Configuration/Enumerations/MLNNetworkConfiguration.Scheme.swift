@@ -21,7 +21,7 @@ extension MLNNetworkConfiguration {
     ///
     ///
     ///
-    public enum Scheme: String {
+    public enum Scheme: String, Sendable {
 
         ///
         ///
