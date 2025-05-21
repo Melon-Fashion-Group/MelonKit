@@ -21,7 +21,7 @@ extension MLNNetworkManager {
     ///
     ///
     ///
-    public struct HTTPHeader {
+    public struct HTTPHeader: Sendable {
 
         // MARK: - Public properties
 

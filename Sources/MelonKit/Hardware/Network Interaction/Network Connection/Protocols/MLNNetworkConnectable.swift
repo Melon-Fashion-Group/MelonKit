@@ -19,7 +19,7 @@ import Foundation
 ///
 ///
 @available(iOS 17.0, *)
-public protocol MLNNetworkConnectable: AnyObject {
+public protocol MLNNetworkConnectable: AnyObject, Sendable {
 
     // MARK: - Public properties
 
