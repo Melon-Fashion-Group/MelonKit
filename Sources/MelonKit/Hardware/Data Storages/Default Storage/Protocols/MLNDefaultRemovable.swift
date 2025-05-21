@@ -19,7 +19,7 @@ import Foundation
 ///
 ///
 @available(iOS 17.0, *)
-public protocol MLNDefaultRemovable: AnyObject {
+public protocol MLNDefaultRemovable: AnyObject, Sendable {
 
     // MARK: - Public methods
 

@@ -26,8 +26,6 @@ public final class MLNDefaultStorage {
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
 
-    private let userDefaults = UserDefaults.standard
-
 
 
     // MARK: - Init
@@ -52,7 +50,7 @@ extension MLNDefaultStorage: MLNDefaultLoadable {
     ///
     public func load<Object: MLNDataDecodable>(_ type: Object.Type, for key: String) -> Object? {
         guard
-            let object = userDefaults.object(forKey: key) as? Data,
+            let object = UserDefaults.standard.object(forKey: key) as? Data,
             let loadedObject = try? decoder.decode(type, from: object)
         else {
             return nil
@@ -76,7 +74,7 @@ extension MLNDefaultStorage: MLNDefaultRemovable {
     ///
     @discardableResult
     public func remove(for key: String) -> Bool {
-        userDefaults.removeObject(forKey: key)
+        UserDefaults.standard.removeObject(forKey: key)
 
         return true
     }
@@ -90,9 +88,8 @@ extension MLNDefaultStorage: MLNDefaultRemovable {
             return false
         }
 
-        userDefaults.removePersistentDomain(forName: bundleID)
-
-        userDefaults.synchronize()
+        UserDefaults.standard.removePersistentDomain(forName: bundleID)
+        UserDefaults.standard.synchronize()
 
         return true
     }
@@ -134,7 +131,7 @@ extension MLNDefaultStorage: MLNDefaultSaveable {
             return false
         }
 
-        userDefaults.set(data, forKey: key)
+        UserDefaults.standard.set(data, forKey: key)
 
         return true
     }
