@@ -16,7 +16,7 @@ import Foundation
 // MARK: - MLNNetworkConfiguration
 
 @available(iOS 17.0, *)
-open class MLNNetworkConfiguration: MLNNetworkConfigurable {
+open class MLNNetworkConfiguration: MLNNetworkConfigurable, @unchecked Sendable {
 
     // MARK: - Public properties
 
