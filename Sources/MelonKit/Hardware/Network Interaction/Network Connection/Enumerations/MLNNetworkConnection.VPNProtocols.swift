@@ -17,7 +17,7 @@ import Foundation
 
 @available(iOS 17.0, *)
 extension MLNNetworkConnection {
-    enum VPNProtocols: String, CaseIterable {
+    enum VPNProtocols: String, CaseIterable, Sendable {
         case ipsec
         case ppp
         case pptp
