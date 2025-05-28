@@ -43,6 +43,7 @@ extension String: QRCodeCodable {
     ///
     ///
     ///
+    @available(iOS 17.0, *)
     public func generateQRCode(as color: UIColor = .black, using scaleFactor: CGFloat = 1) -> UIImage? {
         QRCodeGenerator.generate(from: self, as: color, using: scaleFactor)
     }

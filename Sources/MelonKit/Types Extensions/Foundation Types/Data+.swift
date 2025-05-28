@@ -22,6 +22,7 @@ extension Data {
     ///
     ///
     ///
+    @available(iOS 17.0, *)
     public func printJSON(formatted: Bool = false) {
         if formatted {
             printFormattedJSON()
