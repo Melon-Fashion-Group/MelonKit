@@ -42,6 +42,7 @@ extension StaticString: @retroactive Equatable {
 
     // MARK: - Public methods
 
+    @available(iOS 17.0, *)
     public static func == (_ lhs: Self, _ rhs: Self) -> Bool {
         "\(lhs)" == "\(rhs)"
     }

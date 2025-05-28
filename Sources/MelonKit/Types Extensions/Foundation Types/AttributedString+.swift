@@ -22,6 +22,7 @@ extension AttributedString {
     ///
     ///
     ///
+    @available(iOS 17.0, *)
     public static let empty = Self("")
 }
 
@@ -34,6 +35,7 @@ extension Array<AttributedString> {
     ///
     ///
     ///
+    @available(iOS 17.0, *)
     public func joined(with separator: String = .empty) -> AttributedString {
         let attributedSeparator = AttributedString(separator)
         var newAttributedString: AttributedString = .empty
