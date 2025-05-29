@@ -56,6 +56,13 @@ public final class MLNTabStore: MLNTabStorable {
     ///
     ///
     ///
+    public func append(_ tabs: [MLNTab]) {
+        self.tabs.append(contentsOf: tabs)
+    }
+
+    ///
+    ///
+    ///
     public func remove() {
         if tabs.count > 1 {
             tabs.removeLast()
