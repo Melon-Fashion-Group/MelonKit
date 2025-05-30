@@ -41,7 +41,7 @@ public struct MLNTab {
     ///
     ///
     ///
-    public let view: AnyView
+    public let view: (_: CGFloat) -> AnyView
 
 
 
@@ -54,11 +54,11 @@ public struct MLNTab {
         icon: Image,
         title: LocalizedStringKey? = nil,
         badge: String? = nil,
-        view: some View
+        view: @escaping (_: CGFloat) -> AnyView
     ) {
         self.icon = icon
         self.title = title
         self.badge = badge
-        self.view = .init(view)
+        self.view = view
     }
 }
