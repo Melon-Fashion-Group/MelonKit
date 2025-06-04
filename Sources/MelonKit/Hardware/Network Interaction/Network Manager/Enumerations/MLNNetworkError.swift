@@ -24,6 +24,11 @@ public enum MLNNetworkError: Error {
     ///
     ///
     ///
+    case invalidToken
+
+    ///
+    ///
+    ///
     case invalidURL
 
     ///
