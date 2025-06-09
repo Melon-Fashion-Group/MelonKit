@@ -31,6 +31,11 @@ public final class MLNApp: MLNAppSpecificationable {
     ///
     ///
     ///
+    public let bundleID = Bundle.main.bundleIdentifier!
+
+    ///
+    ///
+    ///
     public let version: Version = {
         guard let string = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
             return .init()
