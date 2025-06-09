@@ -31,6 +31,11 @@ public protocol MLNAppSpecificationable: AnyObject {
     ///
     ///
     ///
+    var bundleID: String { get }
+
+    ///
+    ///
+    ///
     var version: MLNApp.Version { get }
 
     ///
